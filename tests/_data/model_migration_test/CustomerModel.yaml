@@ -1,0 +1,18 @@
+ecw_data_model:
+  name: CustomerModel
+  properties:
+    customer_id:
+      type: int
+      primary: true
+      auto_increment: true
+    first_name:
+      type: varchar(100)
+      nullable: false
+    last_name:
+      type: varchar(100)
+      nullable: false
+    email:
+      type: varchar(255)
+      nullable: false
+    joined_date:
+      type: datetime

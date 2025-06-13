@@ -1,0 +1,9 @@
+ecw_data_model:
+  name: OutputModel
+  properties:
+    order_number:
+      type: string
+    order_sum:
+      type: float
+    order_date:
+      type: timestamp

@@ -1,0 +1,6 @@
+ecw_app_config:
+  plugin_dir: /app/core/extensions
+  properties:
+    plugins:
+      default_plugin:
+        id: default_plugin

@@ -1,0 +1,16 @@
+ecw_data_model:
+  name: ShipmentModel
+  properties:
+    shipment_id:
+      type: int
+      primary: true
+      auto_increment: true
+    order_number:
+      type: varchar(255)
+      nullable: false
+    carrier:
+      type: varchar(100)
+    shipped_date:
+      type: datetime
+    delivery_date:
+      type: datetime

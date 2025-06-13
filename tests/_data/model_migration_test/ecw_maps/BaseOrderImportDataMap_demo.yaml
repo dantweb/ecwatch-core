@@ -1,0 +1,19 @@
+ecw_data_map:
+  name: DemoMap
+  src_data_model: Order
+  map:
+    order_nr:
+      target_name: 'BaseOrderModel.order_number'
+      target_type: string
+    datetime:
+      target_name: 'BaseOrderModel.timestamp'
+      target_type: timestamp
+    sum:
+      target_name: 'BaseOrderModel.order_brutto'
+      target_type: double
+    order_items:
+      target_name: 'BaseOrderModel.order_items_count'
+      target_type: int
+    payment:
+      target_name: 'BaseOrderModel.order_payment_method_id'
+      target_type: string

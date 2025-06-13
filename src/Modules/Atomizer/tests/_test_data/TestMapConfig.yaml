@@ -1,0 +1,13 @@
+ecw_data_map:
+  name: DemoMap
+  src_data_model: Order
+  map:
+    'order_nr' :
+      target_name: 'OutputModel.order_number'
+      target_type: string
+    'datetime' :
+      target_name: 'OutputModel.order_date'
+      target_type: string
+    'order_sum' :
+      target_name: 'OutputModel.order_brutto'
+      target_type: double

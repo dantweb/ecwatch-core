@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Input\ArgvInput;
+
+
+require __DIR__.'/../vendor/autoload.php';
+
+$input = new ArgvInput();
+$env   = $input->hasParameterOption(['--env','-e']) ? $input->getParameterOption(['--env','-e']) : 'dev';
+$debug = ! $input->hasParameterOption('--no-debug');
+$kernel = new \Dantweb\Ecommwatch\App\EcwWatchKernel($env, $debug);
+(new Application($kernel))->run($input);

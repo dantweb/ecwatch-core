@@ -1,0 +1,12 @@
+# config/services_test.yaml
+# Imports the default services, then can override for tests:
+imports:
+  - { resource: 'services.yaml' }
+
+services:
+  # e.g. override any test‑only binds, if needed:
+  _defaults:
+    bind:
+      # point at your test‑DB folder or test fixtures:
+      $importDataDir: '%kernel.project_dir%/tests/_data/model_migration_test'
+

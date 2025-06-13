@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="CLI Arguments" tests="62" assertions="3" errors="59" failures="0" skipped="0" time="0.118313">
+    <testsuite name="Dantweb\Ecommwatch\App\Tests\Command\ImportModelCommandTest" file="/app/core/tests/Unit/App/Command/ImportModelCommandTest.php" tests="4" assertions="0" errors="4" failures="0" skipped="0" time="0.000000">
+      <testcase name="testCsvNotFound" file="/app/core/tests/Unit/App/Command/ImportModelCommandTest.php" line="50" class="Dantweb\Ecommwatch\App\Tests\Command\ImportModelCommandTest" classname="Dantweb.Ecommwatch.App.Tests.Command.ImportModelCommandTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\App\Tests\Command\ImportModelCommandTest::testCsvNotFound
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/App/Command/ImportModelCommandTest.php:32</error>
+      </testcase>
+      <testcase name="testModelYamlMissing" file="/app/core/tests/Unit/App/Command/ImportModelCommandTest.php" line="66" class="Dantweb\Ecommwatch\App\Tests\Command\ImportModelCommandTest" classname="Dantweb.Ecommwatch.App.Tests.Command.ImportModelCommandTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\App\Tests\Command\ImportModelCommandTest::testModelYamlMissing
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/App/Command/ImportModelCommandTest.php:32</error>
+      </testcase>
+      <testcase name="testMapYamlMissing" file="/app/core/tests/Unit/App/Command/ImportModelCommandTest.php" line="84" class="Dantweb\Ecommwatch\App\Tests\Command\ImportModelCommandTest" classname="Dantweb.Ecommwatch.App.Tests.Command.ImportModelCommandTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\App\Tests\Command\ImportModelCommandTest::testMapYamlMissing
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/App/Command/ImportModelCommandTest.php:32</error>
+      </testcase>
+      <testcase name="testSuccessfulImport" file="/app/core/tests/Unit/App/Command/ImportModelCommandTest.php" line="102" class="Dantweb\Ecommwatch\App\Tests\Command\ImportModelCommandTest" classname="Dantweb.Ecommwatch.App.Tests.Command.ImportModelCommandTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\App\Tests\Command\ImportModelCommandTest::testSuccessfulImport
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/App/Command/ImportModelCommandTest.php:32</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\App\Tests\Command\InstallPluginCommandTest" file="/app/core/tests/Unit/App/Command/InstallPluginCommandTest.php" tests="3" assertions="1" errors="2" failures="0" skipped="0" time="0.048069">
+      <testcase name="testPluginIdIsRequired" file="/app/core/tests/Unit/App/Command/InstallPluginCommandTest.php" line="33" class="Dantweb\Ecommwatch\App\Tests\Command\InstallPluginCommandTest" classname="Dantweb.Ecommwatch.App.Tests.Command.InstallPluginCommandTest" assertions="1" time="0.024519"/>
+      <testcase name="testInvalidPluginIdGivesFailure" file="/app/core/tests/Unit/App/Command/InstallPluginCommandTest.php" line="43" class="Dantweb\Ecommwatch\App\Tests\Command\InstallPluginCommandTest" classname="Dantweb.Ecommwatch.App.Tests.Command.InstallPluginCommandTest" assertions="0" time="0.016066">
+        <error type="PDOException">Dantweb\Ecommwatch\App\Tests\Command\InstallPluginCommandTest::testInvalidPluginIdGivesFailure
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/src/Framework/Application/AbstractPlugin.php:39
+/app/core/src/Framework/Application/PluginManager.php:124
+/app/core/src/Framework/Application/PluginManager.php:59
+/app/core/src/Framework/Application/PluginManager.php:21
+/app/core/src/App/Command/InstallPluginCommand.php:38
+/app/core/vendor/symfony/console/Command/Command.php:279
+/app/core/vendor/symfony/console/Tester/CommandTester.php:72
+/app/core/tests/Unit/App/Command/InstallPluginCommandTest.php:49</error>
+      </testcase>
+      <testcase name="testValidPluginInstallsSuccessfully" file="/app/core/tests/Unit/App/Command/InstallPluginCommandTest.php" line="55" class="Dantweb\Ecommwatch\App\Tests\Command\InstallPluginCommandTest" classname="Dantweb.Ecommwatch.App.Tests.Command.InstallPluginCommandTest" assertions="0" time="0.007484">
+        <error type="PDOException">Dantweb\Ecommwatch\App\Tests\Command\InstallPluginCommandTest::testValidPluginInstallsSuccessfully
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/src/Framework/Application/AbstractPlugin.php:39
+/app/core/src/Framework/Application/PluginManager.php:124
+/app/core/src/Framework/Application/PluginManager.php:59
+/app/core/src/Framework/Application/PluginManager.php:21
+/app/core/tests/Unit/App/Command/InstallPluginCommandTest.php:57</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\App\Tests\Command\MigratePluginCommandTest" file="/app/core/tests/Unit/App/Command/MigratePluginCommandTest.php" tests="3" assertions="0" errors="3" failures="0" skipped="0" time="0.000000">
+      <testcase name="testInvalidPluginIdFails" file="/app/core/tests/Unit/App/Command/MigratePluginCommandTest.php" line="48" class="Dantweb\Ecommwatch\App\Tests\Command\MigratePluginCommandTest" classname="Dantweb.Ecommwatch.App.Tests.Command.MigratePluginCommandTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\App\Tests\Command\MigratePluginCommandTest::testInvalidPluginIdFails
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/App/Command/MigratePluginCommandTest.php:33</error>
+      </testcase>
+      <testcase name="testValidPluginMigratesModels" file="/app/core/tests/Unit/App/Command/MigratePluginCommandTest.php" line="58" class="Dantweb\Ecommwatch\App\Tests\Command\MigratePluginCommandTest" classname="Dantweb.Ecommwatch.App.Tests.Command.MigratePluginCommandTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\App\Tests\Command\MigratePluginCommandTest::testValidPluginMigratesModels
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/App/Command/MigratePluginCommandTest.php:33</error>
+      </testcase>
+      <testcase name="testMigrationErrorThrowsException" file="/app/core/tests/Unit/App/Command/MigratePluginCommandTest.php" line="84" class="Dantweb\Ecommwatch\App\Tests\Command\MigratePluginCommandTest" classname="Dantweb.Ecommwatch.App.Tests.Command.MigratePluginCommandTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\App\Tests\Command\MigratePluginCommandTest::testMigrationErrorThrowsException
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/App/Command/MigratePluginCommandTest.php:33</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\App\Tests\Controller\DataControllerTest" file="/app/core/tests/Unit/App/Controller/DataControllerTest.php" tests="2" assertions="1" errors="1" failures="0" skipped="0" time="0.010669">
+      <testcase name="testExpressionResolverServiceIsWired" file="/app/core/tests/Unit/App/Controller/DataControllerTest.php" line="47" class="Dantweb\Ecommwatch\App\Tests\Controller\DataControllerTest" classname="Dantweb.Ecommwatch.App.Tests.Controller.DataControllerTest" assertions="1" time="0.003169"/>
+      <testcase name="testResolveDailyOrderCount" file="/app/core/tests/Unit/App/Controller/DataControllerTest.php" line="53" class="Dantweb\Ecommwatch\App\Tests\Controller\DataControllerTest" classname="Dantweb.Ecommwatch.App.Tests.Controller.DataControllerTest" assertions="0" time="0.007501">
+        <error type="PDOException">Dantweb\Ecommwatch\App\Tests\Controller\DataControllerTest::testResolveDailyOrderCount
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/src/Framework/Application/AbstractPlugin.php:39
+/app/core/src/Framework/Application/PluginManager.php:124
+/app/core/src/Framework/Application/PluginManager.php:59
+/app/core/src/Framework/Application/PluginManager.php:21
+/app/core/src/Framework/Service/ModelResolver.php:134
+/app/core/src/Framework/Service/ModelResolver.php:30
+/app/core/src/Framework/Service/ExpressionEvaluator.php:59
+/app/core/src/Framework/Service/ExpressionEvaluator.php:26
+/app/core/src/Framework/Service/ExpressionEvaluator.php:36
+/app/core/src/Framework/Service/ExpressionResolver.php:32
+/app/core/tests/Unit/App/Controller/DataControllerTest.php:63</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\App\Tests\KernelTest" file="/app/core/tests/Unit/App/KernelTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.000944">
+      <testcase name="testKernelBoots" file="/app/core/tests/Unit/App/KernelTest.php" line="12" class="Dantweb\Ecommwatch\App\Tests\KernelTest" classname="Dantweb.Ecommwatch.App.Tests.KernelTest" assertions="1" time="0.000944"/>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\BasePluginTest" file="/app/core/tests/Unit/Framework/Application/BasePluginTest.php" tests="4" assertions="0" errors="4" failures="0" skipped="0" time="0.000000">
+      <testcase name="testBasePluginCanBeInstantiated" file="/app/core/tests/Unit/Framework/Application/BasePluginTest.php" line="14" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\BasePluginTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Application.BasePluginTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Application\BasePluginTest::testBasePluginCanBeInstantiated
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Application/AppTrait.php:28</error>
+      </testcase>
+      <testcase name="testGetMigratedModelsReturnsArray" file="/app/core/tests/Unit/Framework/Application/BasePluginTest.php" line="21" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\BasePluginTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Application.BasePluginTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Application\BasePluginTest::testGetMigratedModelsReturnsArray
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Application/AppTrait.php:28</error>
+      </testcase>
+      <testcase name="testGetEcwModelsReturnsArray" file="/app/core/tests/Unit/Framework/Application/BasePluginTest.php" line="28" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\BasePluginTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Application.BasePluginTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Application\BasePluginTest::testGetEcwModelsReturnsArray
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Application/AppTrait.php:28</error>
+      </testcase>
+      <testcase name="testIsInstalledReturnsBool" file="/app/core/tests/Unit/Framework/Application/BasePluginTest.php" line="37" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\BasePluginTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Application.BasePluginTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Application\BasePluginTest::testIsInstalledReturnsBool
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Application/AppTrait.php:28</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginManagerTest" file="/app/core/tests/Unit/Framework/Application/PluginManagerTest.php" tests="4" assertions="0" errors="4" failures="0" skipped="0" time="0.000000">
+      <testcase name="testGetAvailablePluginsReturnsArray" file="/app/core/tests/Unit/Framework/Application/PluginManagerTest.php" line="15" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginManagerTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Application.PluginManagerTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginManagerTest::testGetAvailablePluginsReturnsArray
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Application/AppTrait.php:28</error>
+      </testcase>
+      <testcase name="testGetInstalledPluginsReturnsPluginArray" file="/app/core/tests/Unit/Framework/Application/PluginManagerTest.php" line="22" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginManagerTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Application.PluginManagerTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginManagerTest::testGetInstalledPluginsReturnsPluginArray
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Application/AppTrait.php:28</error>
+      </testcase>
+      <testcase name="testGetPluginObjReturnsCorrectInstance" file="/app/core/tests/Unit/Framework/Application/PluginManagerTest.php" line="33" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginManagerTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Application.PluginManagerTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginManagerTest::testGetPluginObjReturnsCorrectInstance
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Application/AppTrait.php:28</error>
+      </testcase>
+      <testcase name="testGetAllMigratedEcwModels" file="/app/core/tests/Unit/Framework/Application/PluginManagerTest.php" line="47" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginManagerTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Application.PluginManagerTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginManagerTest::testGetAllMigratedEcwModels
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Application/AppTrait.php:28</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginResolverTest" file="/app/core/tests/Unit/Framework/Application/PluginResolverTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0.000000">
+      <testcase name="testInstalledPlugins" file="/app/core/tests/Unit/Framework/Application/PluginResolverTest.php" line="15" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Application.PluginResolverTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Application\PluginResolverTest::testInstalledPlugins
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Application/AppTrait.php:28</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest" file="/app/core/tests/Unit/Framework/ExpressionResolverTest.php" tests="7" assertions="0" errors="7" failures="0" skipped="0" time="0.000000">
+      <testcase name="testDailyExpressionReturnsCorrectCount" file="/app/core/tests/Unit/Framework/ExpressionResolverTest.php" line="123" class="Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.ExpressionResolverTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest::testDailyExpressionReturnsCorrectCount
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/ExpressionResolverTest.php:23</error>
+      </testcase>
+      <testcase name="testMonthExpressionThrowsExceptionOnInsufficientTimespan" file="/app/core/tests/Unit/Framework/ExpressionResolverTest.php" line="135" class="Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.ExpressionResolverTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest::testMonthExpressionThrowsExceptionOnInsufficientTimespan
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/ExpressionResolverTest.php:23</error>
+      </testcase>
+      <testcase name="testComposableExpressions1" file="/app/core/tests/Unit/Framework/ExpressionResolverTest.php" line="146" class="Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.ExpressionResolverTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest::testComposableExpressions1
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/ExpressionResolverTest.php:23</error>
+      </testcase>
+      <testcase name="testComposableExpressions2" file="/app/core/tests/Unit/Framework/ExpressionResolverTest.php" line="163" class="Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.ExpressionResolverTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest::testComposableExpressions2
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/ExpressionResolverTest.php:23</error>
+      </testcase>
+      <testcase name="testComposableExpressions3" file="/app/core/tests/Unit/Framework/ExpressionResolverTest.php" line="173" class="Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.ExpressionResolverTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest::testComposableExpressions3
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/ExpressionResolverTest.php:23</error>
+      </testcase>
+      <testcase name="testComposableExpressions4" file="/app/core/tests/Unit/Framework/ExpressionResolverTest.php" line="184" class="Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.ExpressionResolverTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest::testComposableExpressions4
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/ExpressionResolverTest.php:23</error>
+      </testcase>
+      <testcase name="testComposableExpressions5" file="/app/core/tests/Unit/Framework/ExpressionResolverTest.php" line="194" class="Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.ExpressionResolverTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\ExpressionResolverTest::testComposableExpressions5
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/ExpressionResolverTest.php:23</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware\BaseCsvAdapterMigratorImportDataTest" file="/app/core/tests/Unit/Framework/Middleware/BaseCsvAdapterMigratorImportDataTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0.000000">
+      <testcase name="testImportedDemoDataContainsCorrectValues" file="/app/core/tests/Unit/Framework/Middleware/BaseCsvAdapterMigratorImportDataTest.php" line="28" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware\BaseCsvAdapterMigratorImportDataTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Middleware.BaseCsvAdapterMigratorImportDataTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware\BaseCsvAdapterMigratorImportDataTest::testImportedDemoDataContainsCorrectValues
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/Middleware/BaseCsvAdapterMigratorImportDataTest.php:23</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Framework\Tests\Middleware\BaseModelMigratorTest" file="/app/core/tests/Unit/Framework/Middleware/BaseModelMigratorTest.php" tests="2" assertions="0" errors="2" failures="0" skipped="0" time="0.005183">
+      <testcase name="testGetMigrationPlanReturnsModels" file="/app/core/tests/Unit/Framework/Middleware/BaseModelMigratorTest.php" line="46" class="Dantweb\Ecommwatch\Framework\Tests\Middleware\BaseModelMigratorTest" classname="Dantweb.Ecommwatch.Framework.Tests.Middleware.BaseModelMigratorTest" assertions="0" time="0.002626">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Middleware\BaseModelMigratorTest::testGetMigrationPlanReturnsModels
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/BaseModelMigratorTest.php:48</error>
+      </testcase>
+      <testcase name="testMigrationCreatesTablesWithCorrectStructure" file="/app/core/tests/Unit/Framework/Middleware/BaseModelMigratorTest.php" line="69" class="Dantweb\Ecommwatch\Framework\Tests\Middleware\BaseModelMigratorTest" classname="Dantweb.Ecommwatch.Framework.Tests.Middleware.BaseModelMigratorTest" assertions="0" time="0.002557">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Middleware\BaseModelMigratorTest::testMigrationCreatesTablesWithCorrectStructure
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/BaseModelMigratorTest.php:71</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\BaseModelStatisticTest" file="/app/core/tests/Unit/Framework/Middleware/BaseModelStatisticTest.php" tests="5" assertions="0" errors="5" failures="0" skipped="0" time="0.000000">
+      <testcase name="testTotalOrderBrutto" file="/app/core/tests/Unit/Framework/Middleware/BaseModelStatisticTest.php" line="27" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\BaseModelStatisticTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.BaseModelStatisticTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\BaseModelStatisticTest::testTotalOrderBrutto
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/Middleware/BaseModelStatisticTest.php:22</error>
+      </testcase>
+      <testcase name="testAverageOrderBrutto" file="/app/core/tests/Unit/Framework/Middleware/BaseModelStatisticTest.php" line="38" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\BaseModelStatisticTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.BaseModelStatisticTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\BaseModelStatisticTest::testAverageOrderBrutto
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/Middleware/BaseModelStatisticTest.php:22</error>
+      </testcase>
+      <testcase name="testMaxOrderBrutto" file="/app/core/tests/Unit/Framework/Middleware/BaseModelStatisticTest.php" line="50" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\BaseModelStatisticTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.BaseModelStatisticTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\BaseModelStatisticTest::testMaxOrderBrutto
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/Middleware/BaseModelStatisticTest.php:22</error>
+      </testcase>
+      <testcase name="testMinOrderBrutto" file="/app/core/tests/Unit/Framework/Middleware/BaseModelStatisticTest.php" line="61" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\BaseModelStatisticTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.BaseModelStatisticTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\BaseModelStatisticTest::testMinOrderBrutto
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/Middleware/BaseModelStatisticTest.php:22</error>
+      </testcase>
+      <testcase name="testCountOrders" file="/app/core/tests/Unit/Framework/Middleware/BaseModelStatisticTest.php" line="72" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\BaseModelStatisticTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.BaseModelStatisticTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\BaseModelStatisticTest::testCountOrders
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/Middleware/BaseModelStatisticTest.php:22</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Tests\Framework\Middleware\DatabaseConnectorTest" file="/app/core/tests/Unit/Framework/Middleware/DatabaseConnectorTest.php" tests="4" assertions="0" errors="4" failures="0" skipped="0" time="0.000000">
+      <testcase name="testDatabaseConnection" file="/app/core/tests/Unit/Framework/Middleware/DatabaseConnectorTest.php" line="21" class="Dantweb\Ecommwatch\Tests\Framework\Middleware\DatabaseConnectorTest" classname="Dantweb.Ecommwatch.Tests.Framework.Middleware.DatabaseConnectorTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Framework\Middleware\DatabaseConnectorTest::testDatabaseConnection
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/DatabaseConnectorTest.php:18</error>
+      </testcase>
+      <testcase name="testCanExecuteShowTables" file="/app/core/tests/Unit/Framework/Middleware/DatabaseConnectorTest.php" line="29" class="Dantweb\Ecommwatch\Tests\Framework\Middleware\DatabaseConnectorTest" classname="Dantweb.Ecommwatch.Tests.Framework.Middleware.DatabaseConnectorTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Framework\Middleware\DatabaseConnectorTest::testCanExecuteShowTables
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/DatabaseConnectorTest.php:18</error>
+      </testcase>
+      <testcase name="testConnectionErrorHandling" file="/app/core/tests/Unit/Framework/Middleware/DatabaseConnectorTest.php" line="41" class="Dantweb\Ecommwatch\Tests\Framework\Middleware\DatabaseConnectorTest" classname="Dantweb.Ecommwatch.Tests.Framework.Middleware.DatabaseConnectorTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Framework\Middleware\DatabaseConnectorTest::testConnectionErrorHandling
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/DatabaseConnectorTest.php:18</error>
+      </testcase>
+      <testcase name="testPDOErrorMode" file="/app/core/tests/Unit/Framework/Middleware/DatabaseConnectorTest.php" line="54" class="Dantweb\Ecommwatch\Tests\Framework\Middleware\DatabaseConnectorTest" classname="Dantweb.Ecommwatch.Tests.Framework.Middleware.DatabaseConnectorTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Framework\Middleware\DatabaseConnectorTest::testPDOErrorMode
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/DatabaseConnectorTest.php:18</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Tests\Framework\Middleware\MigrationTest" file="/app/core/tests/Unit/Framework/Middleware/MigrationTest.php" tests="2" assertions="0" errors="2" failures="0" skipped="0" time="0.000000">
+      <testcase name="testMigrationForNewTable" file="/app/core/tests/Unit/Framework/Middleware/MigrationTest.php" line="35" class="Dantweb\Ecommwatch\Tests\Framework\Middleware\MigrationTest" classname="Dantweb.Ecommwatch.Tests.Framework.Middleware.MigrationTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Framework\Middleware\MigrationTest::testMigrationForNewTable
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/MigrationTest.php:21</error>
+      </testcase>
+      <testcase name="testMigrationForExistingTableWithSchemaChange" file="/app/core/tests/Unit/Framework/Middleware/MigrationTest.php" line="90" class="Dantweb\Ecommwatch\Tests\Framework\Middleware\MigrationTest" classname="Dantweb.Ecommwatch.Tests.Framework.Middleware.MigrationTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Framework\Middleware\MigrationTest::testMigrationForExistingTableWithSchemaChange
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/MigrationTest.php:21</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest" file="/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php" tests="6" assertions="0" errors="6" failures="0" skipped="0" time="0.000000">
+      <testcase name="testCheckingNonExistingRepo" file="/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php" line="34" class="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest" classname="Dantweb.Ecommwatch.Framework.Tests.Unit.Framework.Middleware.RepoFactoryTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest::testCheckingNonExistingRepo
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php:25</error>
+      </testcase>
+      <testcase name="testRepoHasItems" file="/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php" line="45" class="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest" classname="Dantweb.Ecommwatch.Framework.Tests.Unit.Framework.Middleware.RepoFactoryTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest::testRepoHasItems
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php:25</error>
+      </testcase>
+      <testcase name="testRepoHasItemsWithWhere" file="/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php" line="65" class="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest" classname="Dantweb.Ecommwatch.Framework.Tests.Unit.Framework.Middleware.RepoFactoryTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest::testRepoHasItemsWithWhere
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php:25</error>
+      </testcase>
+      <testcase name="testRepoHasItemsWithConditions" file="/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php" line="91" class="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest" classname="Dantweb.Ecommwatch.Framework.Tests.Unit.Framework.Middleware.RepoFactoryTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest::testRepoHasItemsWithConditions
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php:25</error>
+      </testcase>
+      <testcase name="testRepoReplace" file="/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php" line="115" class="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest" classname="Dantweb.Ecommwatch.Framework.Tests.Unit.Framework.Middleware.RepoFactoryTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest::testRepoReplace
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php:25</error>
+      </testcase>
+      <testcase name="testRepoOperationsWithBulkData" file="/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php" line="150" class="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest" classname="Dantweb.Ecommwatch.Framework.Tests.Unit.Framework.Middleware.RepoFactoryTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoFactoryTest::testRepoOperationsWithBulkData
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Middleware/RepoFactoryTest.php:25</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoWritingModeTest" file="/app/core/tests/Unit/Framework/Middleware/RepoWritingModeTest.php" tests="4" assertions="0" errors="4" failures="0" skipped="0" time="0.000000">
+      <testcase name="testSaveNewModelInsertsAndFindsIt" file="/app/core/tests/Unit/Framework/Middleware/RepoWritingModeTest.php" line="50" class="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoWritingModeTest" classname="Dantweb.Ecommwatch.Framework.Tests.Unit.Framework.Middleware.RepoWritingModeTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoWritingModeTest::testSaveNewModelInsertsAndFindsIt
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/Middleware/RepoWritingModeTest.php:24</error>
+      </testcase>
+      <testcase name="testSaveDuplicateWithOverrideUpdatesExisting" file="/app/core/tests/Unit/Framework/Middleware/RepoWritingModeTest.php" line="76" class="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoWritingModeTest" classname="Dantweb.Ecommwatch.Framework.Tests.Unit.Framework.Middleware.RepoWritingModeTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoWritingModeTest::testSaveDuplicateWithOverrideUpdatesExisting
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/Middleware/RepoWritingModeTest.php:24</error>
+      </testcase>
+      <testcase name="testSaveDuplicateWithReportKeepsOriginal" file="/app/core/tests/Unit/Framework/Middleware/RepoWritingModeTest.php" line="103" class="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoWritingModeTest" classname="Dantweb.Ecommwatch.Framework.Tests.Unit.Framework.Middleware.RepoWritingModeTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoWritingModeTest::testSaveDuplicateWithReportKeepsOriginal
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/Middleware/RepoWritingModeTest.php:24</error>
+      </testcase>
+      <testcase name="testSaveDuplicateWithAddIgnoreDuplicatesAlwaysInserts" file="/app/core/tests/Unit/Framework/Middleware/RepoWritingModeTest.php" line="132" class="Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoWritingModeTest" classname="Dantweb.Ecommwatch.Framework.Tests.Unit.Framework.Middleware.RepoWritingModeTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware\RepoWritingModeTest::testSaveDuplicateWithAddIgnoreDuplicatesAlwaysInserts
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/DemoDataImportTrait.php:31
+/app/core/tests/Unit/Framework/Middleware/RepoWritingModeTest.php:24</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest" file="/app/core/tests/Unit/Framework/Model/ModelResolverTest.php" tests="7" assertions="0" errors="7" failures="0" skipped="0" time="0.053446">
+      <testcase name="testOrderCount2" file="/app/core/tests/Unit/Framework/Model/ModelResolverTest.php" line="21" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.ModelResolverTest" assertions="0" time="0.007609">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest::testOrderCount2
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/src/Framework/Application/AbstractPlugin.php:39
+/app/core/src/Framework/Application/PluginManager.php:124
+/app/core/src/Framework/Application/PluginManager.php:59
+/app/core/src/Framework/Application/PluginManager.php:21
+/app/core/src/Framework/Service/ModelResolver.php:134
+/app/core/src/Framework/Service/ModelResolver.php:30
+/app/core/tests/Unit/Framework/Model/ModelResolverTest.php:25</error>
+      </testcase>
+      <testcase name="testOrderCount5" file="/app/core/tests/Unit/Framework/Model/ModelResolverTest.php" line="29" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.ModelResolverTest" assertions="0" time="0.007694">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest::testOrderCount5
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/src/Framework/Application/AbstractPlugin.php:39
+/app/core/src/Framework/Application/PluginManager.php:124
+/app/core/src/Framework/Application/PluginManager.php:59
+/app/core/src/Framework/Application/PluginManager.php:21
+/app/core/src/Framework/Service/ModelResolver.php:134
+/app/core/src/Framework/Service/ModelResolver.php:30
+/app/core/tests/Unit/Framework/Model/ModelResolverTest.php:33</error>
+      </testcase>
+      <testcase name="testOrderCountW" file="/app/core/tests/Unit/Framework/Model/ModelResolverTest.php" line="41" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.ModelResolverTest" assertions="0" time="0.007474">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest::testOrderCountW
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/src/Framework/Application/AbstractPlugin.php:39
+/app/core/src/Framework/Application/PluginManager.php:124
+/app/core/src/Framework/Application/PluginManager.php:59
+/app/core/src/Framework/Application/PluginManager.php:21
+/app/core/src/Framework/Service/ModelResolver.php:134
+/app/core/src/Framework/Service/ModelResolver.php:30
+/app/core/tests/Unit/Framework/Model/ModelResolverTest.php:45</error>
+      </testcase>
+      <testcase name="testOrderBrutto" file="/app/core/tests/Unit/Framework/Model/ModelResolverTest.php" line="52" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.ModelResolverTest" assertions="0" time="0.007683">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest::testOrderBrutto
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/src/Framework/Application/AbstractPlugin.php:39
+/app/core/src/Framework/Application/PluginManager.php:124
+/app/core/src/Framework/Application/PluginManager.php:59
+/app/core/src/Framework/Application/PluginManager.php:21
+/app/core/src/Framework/Service/ModelResolver.php:134
+/app/core/src/Framework/Service/ModelResolver.php:30
+/app/core/tests/Unit/Framework/Model/ModelResolverTest.php:56</error>
+      </testcase>
+      <testcase name="testOrdersBruttoPlural" file="/app/core/tests/Unit/Framework/Model/ModelResolverTest.php" line="63" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.ModelResolverTest" assertions="0" time="0.007369">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest::testOrdersBruttoPlural
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/src/Framework/Application/AbstractPlugin.php:39
+/app/core/src/Framework/Application/PluginManager.php:124
+/app/core/src/Framework/Application/PluginManager.php:59
+/app/core/src/Framework/Application/PluginManager.php:21
+/app/core/src/Framework/Service/ModelResolver.php:134
+/app/core/src/Framework/Service/ModelResolver.php:30
+/app/core/tests/Unit/Framework/Model/ModelResolverTest.php:67</error>
+      </testcase>
+      <testcase name="testUsersNew" file="/app/core/tests/Unit/Framework/Model/ModelResolverTest.php" line="71" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.ModelResolverTest" assertions="0" time="0.007541">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest::testUsersNew
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/src/Framework/Application/AbstractPlugin.php:39
+/app/core/src/Framework/Application/PluginManager.php:124
+/app/core/src/Framework/Application/PluginManager.php:59
+/app/core/src/Framework/Application/PluginManager.php:21
+/app/core/src/Framework/Service/ModelResolver.php:134
+/app/core/src/Framework/Service/ModelResolver.php:30
+/app/core/tests/Unit/Framework/Model/ModelResolverTest.php:75</error>
+      </testcase>
+      <testcase name="testOrdersNetto" file="/app/core/tests/Unit/Framework/Model/ModelResolverTest.php" line="79" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Model.ModelResolverTest" assertions="0" time="0.008077">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Model\ModelResolverTest::testOrdersNetto
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/src/Framework/Application/AbstractPlugin.php:39
+/app/core/src/Framework/Application/PluginManager.php:124
+/app/core/src/Framework/Application/PluginManager.php:59
+/app/core/src/Framework/Application/PluginManager.php:21
+/app/core/src/Framework/Service/ModelResolver.php:134
+/app/core/src/Framework/Service/ModelResolver.php:30
+/app/core/tests/Unit/Framework/Model/ModelResolverTest.php:83</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Dantweb\Ecommwatch\Tests\Unit\Framework\Service\ImportServiceTest" file="/app/core/tests/Unit/Framework/Service/ImportServiceTest.php" tests="2" assertions="0" errors="2" failures="0" skipped="0" time="0.000000">
+      <testcase name="testImportCsvReturnsCorrectCountAndPersistsRows" file="/app/core/tests/Unit/Framework/Service/ImportServiceTest.php" line="57" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Service\ImportServiceTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Service.ImportServiceTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Service\ImportServiceTest::testImportCsvReturnsCorrectCountAndPersistsRows
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Service/ImportServiceTest.php:32</error>
+      </testcase>
+      <testcase name="testImportCsvThrowsIfTableMissing" file="/app/core/tests/Unit/Framework/Service/ImportServiceTest.php" line="78" class="Dantweb\Ecommwatch\Tests\Unit\Framework\Service\ImportServiceTest" classname="Dantweb.Ecommwatch.Tests.Unit.Framework.Service.ImportServiceTest" assertions="0" time="0.000000">
+        <error type="PDOException">Dantweb\Ecommwatch\Tests\Unit\Framework\Service\ImportServiceTest::testImportCsvThrowsIfTableMissing
+PDOException: SQLSTATE[HY000] [1049] Unknown database 'phpunit_test_app'
+
+/app/core/src/Framework/Middleware/DatabaseConnector.php:103
+/app/core/src/Framework/Middleware/DatabaseConnector.php:69
+/app/core/src/Framework/Middleware/DatabaseConnector.php:80
+/app/core/tests/Unit/Framework/Service/ImportServiceTest.php:32</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

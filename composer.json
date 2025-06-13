@@ -1,0 +1,62 @@
+{
+  "name": "dantweb/ecommwatch",
+  "description": "A project using PSR-12 coding standards, PHPUnit, PHPStan, PHPMD, and Cypress for end-to-end testing",
+  "type": "project",
+  "require": {
+    "php": ">=8.2",
+    "dantweb/atomizer": "*",
+    "doctrine/doctrine-fixtures-bundle": "^4.0",
+    "doctrine/doctrine-migrations-bundle": "^3.4",
+    "doctrine/migrations": "^3.8",
+    "doctrine/orm": "*",
+    "symfony/config": "*",
+    "symfony/console": "*",
+    "symfony/dependency-injection": "*",
+    "symfony/dotenv": "^7.2",
+    "symfony/filesystem": "*",
+    "symfony/framework-bundle": "*",
+    "symfony/http-kernel": "*",
+    "symfony/maker-bundle": "^1.62",
+    "symfony/orm-pack": "^2.4",
+    "symfony/routing": "*",
+    "symfony/yaml": "^7.2"
+  },
+  "require-dev": {
+    "phpmd/phpmd": "^2.12",
+    "phpstan/phpstan": "^1.9",
+    "phpunit/phpunit": "^10.0",
+    "squizlabs/php_codesniffer": "^3.7",
+    "symfony/browser-kit": "^7.2"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "src/Modules/Atomizer"
+    },
+    {
+      "type": "path",
+      "url": "extensions"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Dantweb\\Ecommwatch\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Dantweb\\Ecommwatch\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "phpcs": "phpcs --standard=PSR12 src tests",
+    "phpcbf": "phpcbf --standard=PSR12 src tests",
+    "phpstan": "phpstan analyse src --level=max",
+    "phpmd": "phpmd src text phpmd.xml",
+    "phpunit": "phpunit"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}

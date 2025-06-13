@@ -1,0 +1,45 @@
+# config/services.yaml
+parameters: {}
+
+services:
+  _defaults:
+    autowire:      true
+    autoconfigure: true
+    public:        false
+
+  # ——————————————————————————————————————
+  # App code
+  # ——————————————————————————————————————
+  Dantweb\Ecommwatch\App\:
+    resource: '../src/App/*'
+    exclude:
+      - '../src/App/config'       # config files
+      - '../src/App/Kernel.php'   # custom kernel
+      - '../src/App/DependencyInjection'
+      - '../src/App/Entity'
+      - '../src/App/Tests'
+
+  Dantweb\Ecommwatch\App\Controller\:
+    resource: '../src/App/Controller/'
+    public: true
+    tags: ['controller.service_arguments']
+
+  Dantweb\Ecommwatch\App\Command\:
+    resource: '../src/App/Command/'
+    tags: ['console.command']
+
+  # ——————————————————————————————————————
+  # Framework code
+  # ——————————————————————————————————————
+  Dantweb\Ecommwatch\Framework\:
+    resource: '../src/Framework/*'
+    exclude:
+      - '../src/Framework/DependencyInjection'
+      - '../src/Framework/Entity'
+      - '../src/Framework/Tests'
+
+
+
+  Dantweb\Ecommwatch\Framework\Service\BaseImportService:
+    arguments:
+      $importDataDir: '%kernel.project_dir%/var/import_data'

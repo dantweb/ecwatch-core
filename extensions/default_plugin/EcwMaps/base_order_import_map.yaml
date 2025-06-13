@@ -1,0 +1,13 @@
+ ecw_data_map:
+  name: BaseOrderImportMap
+  src_data_model: Order
+  map:
+    'order_nr' :
+      target_name: 'BaseOrderModel.order_number'
+      target_type: varchar(255)
+    'datetime' :
+      target_name: 'BaseOrderModel.order_timestamp'
+      target_type: int
+    'order_sum' :
+      target_name: 'BaseOrderModel.sum'
+      target_type: double

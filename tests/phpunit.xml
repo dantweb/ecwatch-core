@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        bootstrap="../vendor/autoload.php"
+        colors="true"
+        convertDeprecationsToExceptions="false"
+        verbose="true"
+        stderr="true"
+>
+    <testsuites>
+        <testsuite name="Core Tests">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="APP_DEBUG" value="true"/>
+        <env name="KERNEL_CLASS" value="Dantweb\Ecommwatch\App\Kernel" />
+    </php>
+    <listeners>
+        <listener
+                class="Dantweb\Ecommwatch\Tests\TestSuiteHook"
+                file="tests/TestSuiteHook.php"
+        />
+    </listeners>
+</phpunit>

@@ -1,0 +1,19 @@
+ecw_data_map:
+  name: ImportServiceTest
+  src_data_model: Order
+  map:
+    order_nr:
+      target_name: 'ImportServiceTestModel.order_number'
+      target_type: string
+    datetime:
+      target_name: 'ImportServiceTestModel.timestamp'
+      target_type: timestamp
+    sum:
+      target_name: 'ImportServiceTestModel.order_brutto'
+      target_type: double
+    order_items:
+      target_name: 'ImportServiceTestModel.order_items_count'
+      target_type: int
+    payment:
+      target_name: 'ImportServiceTestModel.order_payment_method_id'
+      target_type: string

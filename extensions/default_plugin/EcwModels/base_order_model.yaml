@@ -1,0 +1,15 @@
+ecw_data_model:
+  name: BaseOrderModel
+  properties:
+    order_number:
+      type: varchar(255)
+      nullable: false
+      primary: true
+    order_brutto:
+      type: float
+    order_items_count:
+      type: int
+    order_payment_method_id:
+      type: varchar(255)
+    timestamp:
+      type: timestamp
