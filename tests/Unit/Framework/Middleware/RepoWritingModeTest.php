@@ -3,15 +3,11 @@
 
 declare(strict_types=1);
 
-namespace Dantweb\Ecommwatch\Framework\Tests\Unit\Framework\Middleware;
+namespace Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware;
 
-use Dantweb\Atomizer\EcwModel\AbstractEcwModel;
-use Dantweb\Atomizer\EcwModel\EcwModelInterface;
-use Dantweb\Ecommwatch\Framework\Exception\EcwTableNotFoundException;
-use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
+use App\Modules\Atomizer\src\EcwModel\AbstractEcwModel;
+use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
 use Dantweb\Ecommwatch\Framework\Middleware\Migration;
-use Dantweb\Ecommwatch\Framework\Middleware\RepoFactory\RepoFactory;
-use Dantweb\Ecommwatch\Framework\Middleware\Repository\AbstractRepo;
 use Dantweb\Ecommwatch\Tests\Unit\DemoDataImportTrait;
 
 final class RepoWritingModeTest extends \PHPUnit\Framework\TestCase

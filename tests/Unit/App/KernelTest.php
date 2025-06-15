@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dantweb\Ecommwatch\App\Tests;
+namespace Dantweb\Ecommwatch\Tests\Unit\App;
 
 use Dantweb\Ecommwatch\App\EcwWatchKernel;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;

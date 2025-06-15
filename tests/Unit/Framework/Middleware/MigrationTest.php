@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Dantweb\Ecommwatch\Tests\Framework\Middleware;
+namespace Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware;
 
-use Dantweb\Atomizer\EcwModel\AbstractEcwModel;
+use App\Modules\Atomizer\src\EcwModel\AbstractEcwModel;
 use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
 use Dantweb\Ecommwatch\Framework\Middleware\Migration;
-
 use PDO;
 
 class MigrationTest extends \PHPUnit\Framework\TestCase

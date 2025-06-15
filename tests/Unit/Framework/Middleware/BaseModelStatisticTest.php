@@ -2,15 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Dantweb\Ecommwatch\Tests\Unit\Framework\Model;
+namespace Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware;
 
-use Dantweb\Atomizer\EcwModel\EcwModelFactory;
-use Dantweb\Atomizer\EcwModel\EcwModelInterface;
 use Dantweb\Ecommwatch\Framework\Models\Domain\AbstractDomainModel;
 use Dantweb\Ecommwatch\Tests\Unit\DemoDataImportTrait;
 use Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware\DemoDataImport;
-use PHPUnit\Framework\TestCase;
 use DateTime;
+use PHPUnit\Framework\TestCase;
 
 
 class BaseModelStatisticTest extends TestCase

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dantweb\Ecommwatch\App\Tests\Command;
+namespace Dantweb\Ecommwatch\Tests\Unit\App\Command;
 
 use Dantweb\Ecommwatch\App\Command\InstallPluginCommand;
 use Dantweb\Ecommwatch\App\EcwWatchKernel;

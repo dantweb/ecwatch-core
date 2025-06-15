@@ -12,7 +12,6 @@ use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
 use Dantweb\Ecommwatch\Framework\Middleware\Migration;
 use Dantweb\Ecommwatch\Framework\Middleware\RepoFactory\RepoFactory;
 use Dantweb\Ecommwatch\Framework\Middleware\Repository\AbstractRepo;
-use Dantweb\Ecommwatch\Framework\Middleware\Repository\RepoInterface;
 use Psr\Log\NullLogger;
 use Symfony\Component\Filesystem\Path;
 

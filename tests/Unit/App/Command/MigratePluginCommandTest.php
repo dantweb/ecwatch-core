@@ -2,13 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Dantweb\Ecommwatch\App\Tests\Command;
+namespace Dantweb\Ecommwatch\Tests\Unit\App\Command;
 
-use Dantweb\Atomizer\EcwModel\AbstractEcwModel;
+use App\Modules\Atomizer\src\EcwModel\AbstractEcwModel;
 use Dantweb\Ecommwatch\App\Command\MigratePluginCommand;
 use Dantweb\Ecommwatch\App\EcwWatchKernel;
 use Dantweb\Ecommwatch\Framework\Application\PluginManager;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
 use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
 use PHPUnit\Framework\TestCase;
 use Symfony\Bundle\FrameworkBundle\Console\Application as ConsoleApplication;

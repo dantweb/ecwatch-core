@@ -2,16 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dantweb\Ecommwatch\App\Tests\Controller;
+namespace Dantweb\Ecommwatch\Tests\Unit\App\Controller;
 
-use Dantweb\Atomizer\Adapter\BaseAdapter;
-use Dantweb\Atomizer\EcwModel\EcwModelFactory;
-use Dantweb\Atomizer\Map\MapFactory;
 use Dantweb\Ecommwatch\App\EcwWatchKernel;
-use Dantweb\Ecommwatch\Framework\Middleware\BaseModelMigrator;
-use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
-use Dantweb\Ecommwatch\Framework\Middleware\Migration;
-use Dantweb\Ecommwatch\Framework\Middleware\RepoFactory\RepoFactory;
 use Dantweb\Ecommwatch\Framework\Service\ExpressionResolver;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\NullLogger;

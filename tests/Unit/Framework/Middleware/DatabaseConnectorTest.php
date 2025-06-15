@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dantweb\Ecommwatch\Tests\Framework\Middleware;
+namespace Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware;
 
 use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
 use PDO;
