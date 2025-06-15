@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Framework\Middleware;
 
-use Dantweb\Atomizer\EcwModel\EcwModelInterface;
+use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
 use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
 use Dantweb\Ecommwatch\Framework\Helper\Logger;
-use PDO;
 use Exception;
+use PDO;
 
 class Migration
 {

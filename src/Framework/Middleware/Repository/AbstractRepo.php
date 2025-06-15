@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Framework\Middleware\Repository;
 
-use Dantweb\Atomizer\EcwModel\EcwModelInterface;
+use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
 use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
 use PDO;
 

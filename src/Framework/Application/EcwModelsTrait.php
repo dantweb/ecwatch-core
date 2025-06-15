@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Framework\Application;
 
-use Dantweb\Atomizer\EcwModel\EcwModelFactory;
-use Dantweb\Atomizer\EcwModel\EcwModelInterface;
-use Dantweb\Atomizer\Map\MapFactory;
-use Dantweb\Atomizer\Map\MapInterface;
-use Dantweb\Ecommwatch\Framework\Models\Domain\AbstractDomainModel;
-use Dantweb\Ecommwatch\Framework\Models\Domain\DomainModelInterface;
+use App\Modules\Atomizer\src\EcwModel\EcwModelFactory;
+use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
+use App\Modules\Atomizer\src\Map\MapFactory;
+use App\Modules\Atomizer\src\Map\MapInterface;
 use Symfony\Component\Filesystem\Path;
 
 trait EcwModelsTrait

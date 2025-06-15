@@ -2,7 +2,7 @@
 
 namespace Dantweb\Ecommwatch\Framework\Middleware\RepoFactory;
 
-use Dantweb\Atomizer\EcwModel\EcwModelInterface;
+use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
 use Dantweb\Ecommwatch\Framework\Middleware\Repository\RepoInterface;
 
 interface RepoFactoryInterface

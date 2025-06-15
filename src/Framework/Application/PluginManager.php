@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Framework\Application;
 
-use Dantweb\Atomizer\EcwModel\EcwModelInterface;
+use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
 use Symfony\Component\Filesystem\Path;
 
 class PluginManager

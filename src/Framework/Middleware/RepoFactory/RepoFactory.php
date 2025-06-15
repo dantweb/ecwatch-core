@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Framework\Middleware\RepoFactory;
 
-use Dantweb\Atomizer\EcwModel\EcwModelInterface;
+use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
 use Dantweb\Ecommwatch\Framework\Exception\EcwTableNotFoundException;
+use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
 use Dantweb\Ecommwatch\Framework\Middleware\Repository\AbstractRepo;
 use Dantweb\Ecommwatch\Framework\Middleware\Repository\RepoInterface;
-use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
 use Exception;
 use PDO;
 

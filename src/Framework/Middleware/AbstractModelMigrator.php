@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Framework\Middleware;
 
-use Dantweb\Atomizer\EcwModel\EcwModelInterface;
-use Dantweb\Atomizer\Map\MapFactory;
-use Dantweb\Atomizer\Map\MapInterface;
+use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
+use Dantweb\Ecommwatch\Config\Defaults;
 use Dantweb\Ecommwatch\Framework\Application\EcwModelsTrait;
 use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
-use Dantweb\Ecommwatch\Config\Defaults;
 use Dantweb\Ecommwatch\Framework\Helper\Logger;
 
 abstract class AbstractModelMigrator

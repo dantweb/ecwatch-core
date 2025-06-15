@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\App\Command;
 
-use Dantweb\Ecommwatch\Framework\Service\BaseImportService;
-use Dantweb\Ecommwatch\Framework\Service\ImportService;
+use Dantweb\Atomizer\Adapter\BaseAdapter;
 use Dantweb\Atomizer\EcwModel\EcwModelFactory;
 use Dantweb\Atomizer\Map\MapFactory;
-use Dantweb\Atomizer\Adapter\BaseAdapter;
+use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Ecommwatch\Framework\Service\BaseImportService;
+use Dantweb\Ecommwatch\Framework\Service\ImportService;
+use Psr\Log\NullLogger;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Psr\Log\NullLogger;
 use Symfony\Component\Filesystem\Path;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
 
 class ImportModelCommand extends Command
 {

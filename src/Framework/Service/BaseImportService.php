@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Dantweb\Ecommwatch\Framework\Service;
 
 use Dantweb\Atomizer\Adapter\AdapterInterface;
-use Dantweb\Atomizer\EcwModel\EcwModelInterface;
-use Dantweb\Atomizer\Map\MapInterface;
+use Dantweb\Atomizer\EcwModelInterface;
+use Dantweb\Atomizer\MapInterface;
 use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
 use Dantweb\Ecommwatch\Framework\Exception\EcwTableNotFoundException;
 use Dantweb\Ecommwatch\Framework\Helper\Logger;

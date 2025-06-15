@@ -12,7 +12,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Dantweb\Ecommwatch\Framework\Middleware\Migration;
 use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
-use Dantweb\Ecommwatch\Framework\Middleware\BaseModelMigrator;
 use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
 
 class MigratePluginCommand extends Command
