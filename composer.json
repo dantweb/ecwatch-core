@@ -4,7 +4,7 @@
   "type": "project",
   "require": {
     "php": ">=8.2",
-    "dantweb/atomizer": "*",
+    "dantweb/atomizer": "^1.0.0",
     "doctrine/doctrine-fixtures-bundle": "^4.0",
     "doctrine/doctrine-migrations-bundle": "^3.4",
     "doctrine/migrations": "^3.8",
@@ -30,8 +30,8 @@
   },
   "repositories": [
     {
-      "type": "path",
-      "url": "src/Modules/Atomizer"
+      "type": "vcs",
+      "url": "https://github.com/dantweb/atomizer.git"
     },
     {
       "type": "path",
