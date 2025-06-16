@@ -20,8 +20,7 @@ abstract class AbstractModelMigrator
     public function __construct(
         protected Migration $migrationService,
         protected string $modelDir
-    )
-    {
+    ) {
         if (empty($this->modelDir)) {
             $this->modelDir = self::$MODEL_DIR;
         }

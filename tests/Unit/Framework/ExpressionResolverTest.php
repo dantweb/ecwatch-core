@@ -77,8 +77,7 @@ class ExpressionResolverTest extends TestCase
         string $basis,
         string $end,
         ?array $expectedArrayValues = null
-    ): array
-    {
+    ): array {
         $result = $this->expressionResolver->resolve($expression, $basis, $end);
         $startDate = DateTime::createFromFormat('d.m.Y', $basis);
         $endDate   = DateTime::createFromFormat('d.m.Y', $end);
@@ -219,6 +218,5 @@ class ExpressionResolverTest extends TestCase
 
         $expression = 'daily( BaseOrderModel.max(order_brutto) ) / daily( BaseOrderModel.avg(order_brutto) )';
         $result = $this->finishTest($expression, $basis, $end);
-
     }
 }

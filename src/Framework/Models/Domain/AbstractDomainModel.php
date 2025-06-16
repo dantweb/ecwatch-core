@@ -10,7 +10,6 @@ use Dantweb\Ecommwatch\Framework\Middleware\RepoFactory\RepoFactory;
 use Dantweb\Ecommwatch\Framework\Middleware\Repository\RepoInterface;
 use Dantweb\Ecommwatch\Framework\Models\AbstractModel\AbstractModel;
 
-
 abstract class AbstractDomainModel extends AbstractModel implements DomainModelInterface
 {
     protected RepoInterface $repo;
@@ -28,7 +27,7 @@ abstract class AbstractDomainModel extends AbstractModel implements DomainModelI
     public static function fromEcwModel(EcwModelInterface $ecwModel): AbstractDomainModel
     {
         // Create an anonymous subclass with same name & fields
-        $domain = new class($ecwModel->getModelName(), $ecwModel->getFields()) extends AbstractDomainModel {
+        $domain = new class ($ecwModel->getModelName(), $ecwModel->getFields()) extends AbstractDomainModel {
             // no overrides needed
         };
 
@@ -127,7 +126,7 @@ abstract class AbstractDomainModel extends AbstractModel implements DomainModelI
         return $last - $first;
     }
 
-    public function rel_disp(string $field, int $start, int $end, string $resolution): float
+    public function relDisp(string $field, int $start, int $end, string $resolution): float
     {
         // Relative displacement computed as (last - first) / first.
         $first = $this->first($field, $start, $end);
@@ -138,7 +137,7 @@ abstract class AbstractDomainModel extends AbstractModel implements DomainModelI
         return ($last - $first) / $first;
     }
 
-    public function avg_sqr_variation(string $field, int $start, int $end): float
+    public function avgSqrVariation(string $field, int $start, int $end): float
     {
         $values = $this->getFieldValues($field, $start, $end);
         $count  = count($values);

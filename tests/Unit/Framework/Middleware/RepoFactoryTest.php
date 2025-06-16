@@ -232,6 +232,8 @@ final class RepoFactoryTest extends \PHPUnit\Framework\TestCase
 /**
  * Test model class implementing the expected table structure.
  */
+// phpcs:disable PSR1.Classes.ClassDeclaration.MultipleClasses
+
 class TestModelClass extends AbstractEcwModel
 {
     public function __construct()

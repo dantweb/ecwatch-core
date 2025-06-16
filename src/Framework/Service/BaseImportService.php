@@ -14,7 +14,6 @@ use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
 use Dantweb\Ecommwatch\Framework\Middleware\RepoFactory\RepoFactory;
 use Dantweb\Ecommwatch\Framework\Middleware\Repository\AbstractRepo;
 
-
 class BaseImportService
 {
     public const PROTOCOL_CSV = 'csv';
@@ -39,8 +38,7 @@ class BaseImportService
         MapInterface $map,
         AdapterInterface $adapter,
         string $absPathCsv
-    ): int
-    {
+    ): int {
         $repo = $this->repoFactory->getRepo($ecwModel);
         $repo->setWritingMode(AbstractRepo::DUPLICATES_REPORT);
         $importedModels = $adapter->getModelArrayFromCsv($ecwModel, $absPathCsv);
@@ -63,8 +61,7 @@ class BaseImportService
         MapInterface $map,
         AdapterInterface $adapter,
         string $absPathCsv
-    ): int
-    {
+    ): int {
         if (!in_array($protocol, self::PROTOCOLS)) {
             throw new ECWatchException('Protocol not supported: ' . $protocol);
         }

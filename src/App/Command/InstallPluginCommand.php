@@ -53,7 +53,7 @@ class InstallPluginCommand extends Command
 
         try {
             $config->addPlugin($pluginId['id']);
-        } catch (IOException|\Exception $e) {
+        } catch (IOException | \Exception $e) {
             $io->error('Failed to install plugin');
             $io->error($e->getMessage());
             throw new ECWatchException($e->getMessage());

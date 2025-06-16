@@ -66,14 +66,16 @@ class RepoFactory implements RepoFactoryInterface
             if ($dbType !== $modelType) {
                 throw new Exception(
                     "Type mismatch for field '$fieldName': database "
-                    . "reports '$dbType' but model expects '$modelType'.");
+                    . "reports '$dbType' but model expects '$modelType'."
+                );
             }
         }
 
-        return new class(
+        return new class (
             $ecwModel,
             $this->databaseConnector
-        ) extends AbstractRepo {};
+        ) extends AbstractRepo {
+        };
     }
 
     private function getDbConnection(): ?\PDO

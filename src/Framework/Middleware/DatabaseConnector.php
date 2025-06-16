@@ -34,8 +34,8 @@ class DatabaseConnector
     ) {
         $rootDir = dirname(__DIR__, 3);
 
-        $envFile[0] = Path::join($rootDir , '.env');
-        $envFile[1] = Path::join($rootDir , 'tests', '.env');
+        $envFile[0] = Path::join($rootDir, '.env');
+        $envFile[1] = Path::join($rootDir, 'tests', '.env');
         $dotenv = new Dotenv();
         if (file_exists($envFile[1]) && $this->isTestMode()) {
             $dotenv->overload($envFile[1]);
@@ -69,25 +69,28 @@ class DatabaseConnector
         $this->connect();
     }
 
-    public static function getInstance(string $dbHost = '',
-                                       string $dbUser = '',
-                                       string $dbPassword = '',
-                                       string $dbName = '',
-                                       int $dbPort = 3306,
-                                       string $writingMode = 'duplicates_report'): self
-    {
+    public static function getInstance(
+        string $dbHost = '',
+        string $dbUser = '',
+        string $dbPassword = '',
+        string $dbName = '',
+        int $dbPort = 3306,
+        string $writingMode = 'duplicates_report'
+    ): self {
         if (self::$instance === null) {
-            self::$instance = new self( $dbHost, $dbUser, $dbPassword, $dbName, $dbPort, $writingMode);
+            self::$instance = new self($dbHost, $dbUser, $dbPassword, $dbName, $dbPort, $writingMode);
         }
 
         $instance = self::$instance;
 
-        if ($dbHost !== '' && $instance->dbHost !== $dbHost ||
+        if (
+            $dbHost !== '' && $instance->dbHost !== $dbHost ||
             $dbUser !== '' && $instance->dbUser !== $dbUser ||
             $dbPassword !== '' && $instance->dbPassword !== $dbPassword ||
             $dbName !== '' && $instance->dbName !== $dbName ||
-            $dbPort !== 3306 && $instance->dbPort !== $dbPort) {
-            return new self( $dbHost, $dbUser, $dbPassword, $dbName, $dbPort, $writingMode);
+            $dbPort !== 3306 && $instance->dbPort !== $dbPort
+        ) {
+            return new self($dbHost, $dbUser, $dbPassword, $dbName, $dbPort, $writingMode);
         }
 
         return self::$instance;
@@ -123,6 +126,6 @@ class DatabaseConnector
 
     protected function isTestMode(): bool
     {
-        return isset($_ENV['PHP_UNIT']) && $_ENV['PHP_UNIT']==true;
+        return isset($_ENV['PHP_UNIT']) && $_ENV['PHP_UNIT'] == true;
     }
 }

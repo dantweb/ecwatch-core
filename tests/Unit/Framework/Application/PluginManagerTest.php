@@ -8,10 +8,10 @@ use Dantweb\Ecommwatch\Framework\Application\PluginManager;
 use Dantweb\Ecommwatch\Framework\Application\PluginInterface;
 use PHPUnit\Framework\TestCase;
 
-
 class PluginManagerTest extends TestCase
 {
     use AppTrait;
+
     public function testGetAvailablePluginsReturnsArray()
     {
         $app = new PluginManager();

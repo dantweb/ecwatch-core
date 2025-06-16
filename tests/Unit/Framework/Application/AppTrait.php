@@ -34,7 +34,8 @@ trait AppTrait
         // migration could take place in another test
         try {
             $migrator->migrate();
-        } catch (\Exception $e) {}
+        } catch (\Exception $e) {
+        }
 
         parent::setUp();
     }

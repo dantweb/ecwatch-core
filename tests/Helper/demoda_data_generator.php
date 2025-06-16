@@ -1,5 +1,8 @@
-#!/usr/bin/env php
 <?php
+
+// phpcs:disable PSR1.Files.SideEffects
+
+
 declare(strict_types=1);
 
 /**
@@ -18,8 +21,10 @@ function linearInterpolate(float $x, array $xs, array $ys): float
     }
     for ($i = 0; $i < $n - 1; $i++) {
         if ($x >= $xs[$i] && $x <= $xs[$i + 1]) {
-            $x0 = $xs[$i]; $y0 = $ys[$i];
-            $x1 = $xs[$i + 1]; $y1 = $ys[$i + 1];
+            $x0 = $xs[$i];
+            $y0 = $ys[$i];
+            $x1 = $xs[$i + 1];
+            $y1 = $ys[$i + 1];
             return $y0 + ($x - $x0) * ($y1 - $y0) / ($x1 - $x0);
         }
     }

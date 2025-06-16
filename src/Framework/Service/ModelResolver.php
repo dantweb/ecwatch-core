@@ -148,11 +148,11 @@ class ModelResolver
      */
     private static function callDomainMethod(
         DomainModelInterface $domainModel,
-        string               $method,
-        string               $fieldName,
-        DateTime             $start,
-        DateTime             $end,
-        string               $resolution
+        string $method,
+        string $fieldName,
+        DateTime $start,
+        DateTime $end,
+        string $resolution
     ): float|int {
         // Convert to timestamps before passing
         $startTS = $start->getTimestamp();

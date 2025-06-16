@@ -78,7 +78,8 @@ class ImportServiceTest extends TestCase
     public function testImportCsvThrowsIfTableMissing(): void
     {
         // Create a dummy model whose table hasn't been migrated
-        $dummyModel = new class('nonexistent_table', ['foo'=>['type'=>'int']]) extends AbstractEcwModel {};
+        $dummyModel = new class ('nonexistent_table', ['foo' => ['type' => 'int']]) extends AbstractEcwModel {
+        };
 
         try {
             $this->service->importCsv(

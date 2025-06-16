@@ -1,6 +1,5 @@
 <?php
 
-
 declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware;
@@ -155,7 +154,7 @@ final class RepoWritingModeTest extends \PHPUnit\Framework\TestCase
 
     private function createTestModel(string $tableName, array $fields): AbstractEcwModel
     {
-        return new class($tableName, $fields) extends AbstractEcwModel {
+        return new class ($tableName, $fields) extends AbstractEcwModel {
             // Any additional method overrides if needed
         };
     }

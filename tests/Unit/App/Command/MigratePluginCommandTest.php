@@ -90,7 +90,8 @@ class MigratePluginCommandTest extends TestCase
         $ref = new \ReflectionObject($plugin);
         $prop = $ref->getParentClass()->getProperty('migratedModels');
         $prop->setValue($plugin, [
-            new class('', []) extends AbstractEcwModel {}
+            new class ('', []) extends AbstractEcwModel {
+            }
         ]);
 
         $command = $this->application->find('ecw:migrate-plugin');
@@ -98,6 +99,5 @@ class MigratePluginCommandTest extends TestCase
 
         $exit = $tester->execute(['pluginId' => $default['id']]);
         $this->assertSame(Command::SUCCESS, $exit);
-
     }
 }

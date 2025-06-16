@@ -49,7 +49,8 @@ trait DemoDataImportTrait
 
         try {
             $migrator->migrate();
-        } catch (\Exception $e) {}
+        } catch (\Exception $e) {
+        }
     }
 
     protected function cleanUp(): void

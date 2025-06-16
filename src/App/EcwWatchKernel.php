@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\App;
@@ -28,17 +29,17 @@ class EcwWatchKernel extends Kernel implements KernelInterface
     private function getConfigDir(): string
     {
         // e.g. /app/core/config
-        return $this->getProjectDir().'/config';
+        return $this->getProjectDir() . '/config';
     }
 
     protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader): void
     {
         $conf = $this->getConfigDir();
         // load your packages (if any)
-        $loader->load($conf.'/packages/*.yaml', 'glob');
+        $loader->load($conf . '/packages/*.yaml', 'glob');
         // load main services
-        $loader->load($conf.'/services.yaml', 'yaml');
+        $loader->load($conf . '/services.yaml', 'yaml');
         // load environment‑specific overrides (for `test` loads services_test.yaml)
-        $loader->load($conf.'/services_'.$this->environment.'.yaml', 'yaml');
+        $loader->load($conf . '/services_' . $this->environment . '.yaml', 'yaml');
     }
 }

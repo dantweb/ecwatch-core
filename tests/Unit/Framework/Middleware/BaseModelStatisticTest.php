@@ -10,7 +10,6 @@ use Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware\DemoDataImport;
 use DateTime;
 use PHPUnit\Framework\TestCase;
 
-
 class BaseModelStatisticTest extends TestCase
 {
     use DemoDataImportTrait;

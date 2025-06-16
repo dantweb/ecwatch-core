@@ -7,7 +7,6 @@ namespace Dantweb\Ecommwatch\Framework\Service\TimeSeries;
 use Dantweb\Ecommwatch\Framework\Exception\ExpressionTimeSpaceException;
 use DateTime;
 
-
 class WeeklyGenerator implements TimeSeriesGeneratorInterface
 {
     public function generate(DateTime $start, DateTime $end): array

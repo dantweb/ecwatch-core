@@ -171,7 +171,7 @@ abstract class AbstractRepo implements RepoInterface
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Convert results to model instances
-        return array_map(function($row) {
+        return array_map(function ($row) {
             $model = clone $this->ecwModel;
             foreach ($row as $key => $value) {
                 $model->set($key, $value);
@@ -200,7 +200,6 @@ abstract class AbstractRepo implements RepoInterface
         }
 
         return $model;
-
     }
 
     public function delete(int $id): void
@@ -290,7 +289,7 @@ abstract class AbstractRepo implements RepoInterface
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Convert results to model instances
-        return array_map(function($row) {
+        return array_map(function ($row) {
             $model = clone $this->ecwModel;
             foreach ($row as $key => $value) {
                 $model->set($key, $value);

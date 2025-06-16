@@ -54,10 +54,10 @@ class ModelResolverTest extends TestCase
         $start = DateTime::createFromFormat('d.m.Y H:i:s', '01.01.2024 00:00:00');
         $end   = DateTime::createFromFormat('d.m.Y H:i:s', '04.01.2024 00:00:00');
         $result = ModelResolver::resolve('BaseOrderModel.order_brutto.sum()', $start, $end, 'daily');
-        $this->assertEquals( 807.38, $result);
+        $this->assertEquals(807.38, $result);
 
         $result = ModelResolver::resolve('BaseOrderModel.sum(order_brutto)', $start, $end, 'daily');
-        $this->assertEquals( 807.38, $result);
+        $this->assertEquals(807.38, $result);
     }
 
     public function testOrdersBruttoPlural(): void

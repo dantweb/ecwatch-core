@@ -10,9 +10,10 @@ class ModelFactory extends EcwModelFactory
 {
     public function createAnonymousEcwModel(array $yaml): EcwModelInterface
     {
-        return new class(
+        return new class (
             $yaml['ecw_data_model']['name'],
             $yaml['ecw_data_model']['properties']
-        ) extends AbstractDomainModel {};
+        ) extends AbstractDomainModel {
+        };
     }
 }

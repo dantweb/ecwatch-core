@@ -17,6 +17,6 @@ interface DomainModelInterface
     public function first(string $field, int $start, int $end): float;
     public function weightAvg(string $field, int $start, int $end, string $resolution): float;
     public function disp(string $field, int $start, int $end, string $resolution): float;
-    public function rel_disp(string $field, int $start, int $end, string $resolution): float;
-    public function avg_sqr_variation(string $field, int $start, int $end): float;
+    public function relDisp(string $field, int $start, int $end, string $resolution): float;
+    public function avgSqrVariation(string $field, int $start, int $end): float;
 }

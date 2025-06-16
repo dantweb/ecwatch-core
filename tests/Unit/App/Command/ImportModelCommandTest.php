@@ -32,7 +32,8 @@ class ImportModelCommandTest extends TestCase
         $this->db = DatabaseConnector::getInstance();
         // Ensure tables are migrated
         $migration = new Migration($this->db);
-        $migrator  = new BaseModelMigrator($migration,
+        $migrator  = new BaseModelMigrator(
+            $migration,
             Path::join(__DIR__, '/../../../_data/model_migration_test')
         );
         $migrator->migrate();

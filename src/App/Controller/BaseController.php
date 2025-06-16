@@ -6,5 +6,4 @@ namespace Dantweb\Ecommwatch\App\Controller;
 
 class BaseController extends AbstractController
 {
-
 }

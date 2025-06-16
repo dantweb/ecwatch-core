@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware;
@@ -80,7 +81,13 @@ class BaseModelMigratorTest extends TestCase
         // Define expected table structure for each model.
         $expectedTables = [
             'BaseOrderModel' => [
-                'order_number' => ['type' => 'varchar(255)', 'null' => 'NO', 'key' => '', 'extra' => '', 'unique' => 'YES'],
+                'order_number' => [
+                    'type' => 'varchar(255)',
+                    'null' => 'NO',
+                    'key' => '',
+                    'extra' => '',
+                    'unique' => 'YES'
+                ],
                 'order_brutto' => ['type' => 'float', 'null' => 'YES', 'key' => '', 'extra' => ''],
                 'order_items_count' => ['type' => 'int', 'null' => 'YES', 'key' => '', 'extra' => ''],
                 'order_payment_method_id' => ['type' => 'varchar(255)', 'null' => 'YES', 'key' => '', 'extra' => ''],

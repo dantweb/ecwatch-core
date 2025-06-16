@@ -10,7 +10,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Dantweb\Ecommwatch\Framework\Service\ExpressionResolver;
 use Dantweb\Ecommwatch\Framework\Service\ModelResolver;
-
 use Symfony\Component\HttpFoundation\Response;
 
 abstract class AbstractController extends SymfonyAbstractController
@@ -19,7 +18,8 @@ abstract class AbstractController extends SymfonyAbstractController
         protected ExpressionResolver $expressionResolver,
         protected ModelResolver $modelResolver,
         protected BaseImportService $importService
-    ) {}
+    ) {
+    }
 
     /**
      * GET  /data?expression=...&start=dd.mm.YYYY&end=dd.mm.YYYY
@@ -31,15 +31,18 @@ abstract class AbstractController extends SymfonyAbstractController
         $end   = $request->query->get('end', null);
 
         if (!$expr) {
-            return $this->json(['success'=>false, 'error'=>'Missing expression parameter'], Response::HTTP_BAD_REQUEST);
+            return $this->json(
+                ['success' => false, 'error' => 'Missing expression parameter'],
+                Response::HTTP_BAD_REQUEST
+            );
         }
 
         try {
             $result = $this->expressionResolver->resolve($expr, $start, $end);
-            return $this->json(['success'=>true, 'data'=>$result]);
+            return $this->json(['success' => true, 'data' => $result]);
         } catch (\Throwable $e) {
             return $this->json(
-                ['success'=>false, 'error'=>$e->getMessage()],
+                ['success' => false, 'error' => $e->getMessage()],
                 Response::HTTP_INTERNAL_SERVER_ERROR
             );
         }

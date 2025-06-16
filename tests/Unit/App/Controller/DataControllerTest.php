@@ -13,7 +13,6 @@ use Symfony\Component\HttpKernel\KernelInterface;
 
 class DataControllerTest extends TestCase
 {
-
     protected static string $testDir = "/../../../_data/model_migration_test/";
     protected string $importDataDir = '';
 

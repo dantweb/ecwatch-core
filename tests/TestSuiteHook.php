@@ -10,6 +10,7 @@ use PHPUnit\Runner\AfterLastTestHook;
 class TestSuiteHook implements BeforeFirstTestHook, AfterLastTestHook
 {
     use DemoDataImportTrait;
+
     public function setUpBeforeClass(): void
     {
         $this->doMigrations();

@@ -6,5 +6,4 @@ namespace Dantweb\Ecommwatch\Framework\Exception;
 
 class EcwTableNotFoundException extends ECWatchException
 {
-
 }

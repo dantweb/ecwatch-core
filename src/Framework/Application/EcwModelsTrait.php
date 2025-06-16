@@ -51,7 +51,6 @@ trait EcwModelsTrait
 
         $mapFactory = new MapFactory();
         foreach ($files as $filePath) {
-
             $yamlString = file_get_contents($filePath);
             if ($yamlString === false) {
                 continue;

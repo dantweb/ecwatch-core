@@ -65,7 +65,6 @@ class InstallPluginCommandTest extends TestCase
         if (!empty($installedPlugins)) {
             $this->expectException(ECWatchException::class);
             $tester->execute(['pluginId' => $pluginId]);
-
         } else {
             $tester->execute(['pluginId' => $pluginId]);
             $this->assertSame(Command::SUCCESS, $tester->getStatusCode());

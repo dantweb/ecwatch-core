@@ -81,8 +81,7 @@ abstract class AbstractModel extends AbstractEcwModel implements AbstractInterfa
             $this->setField($key, $value);
         } else {
             Logger::warn("AbstractImportDataModel::setDataByFieldPath error: $key "
-                ."does not exist in the model $this->className "
-            );
+                . "does not exist in the model $this->className ");
         }
     }
 

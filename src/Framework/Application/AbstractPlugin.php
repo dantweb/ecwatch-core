@@ -24,7 +24,7 @@ abstract class AbstractPlugin implements PluginInterface
     private string $mapDir;
     private BaseModelMigrator $baseModelMigrator;
 
-    public function __construct(protected string $id,  protected string $version = 'dev')
+    public function __construct(protected string $id, protected string $version = 'dev')
     {
         $this->modelDir = Path::join(
             (new Config())->getPluginDir(),
@@ -38,7 +38,8 @@ abstract class AbstractPlugin implements PluginInterface
         );
         $this->migration = new Migration(DatabaseConnector::getInstance());
         $this->baseModelMigrator = new BaseModelMigrator(
-            $this->migration, $this->modelDir
+            $this->migration,
+            $this->modelDir
         );
         $this->migratedModels = $this->getMigratedModels();
         $this->allModels = $this->baseModelMigrator->getEcwModels();
@@ -59,9 +60,8 @@ abstract class AbstractPlugin implements PluginInterface
     {
         if (empty($this->migratedModels)) {
             $this->allModels = $this->getEcwModels();
-            foreach($this->allModels as $model) {
-                if ($this->migration->isTableExists($model->getModelName()))
-                {
+            foreach ($this->allModels as $model) {
+                if ($this->migration->isTableExists($model->getModelName())) {
                     $this->migratedModels[] = $model;
                 }
             }

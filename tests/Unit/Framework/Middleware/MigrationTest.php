@@ -26,7 +26,7 @@ class MigrationTest extends \PHPUnit\Framework\TestCase
      */
     private function createTestModel(string $tableName, array $fields): AbstractEcwModel
     {
-        return new class($tableName, $fields) extends AbstractEcwModel {
+        return new class ($tableName, $fields) extends AbstractEcwModel {
             // Any additional method overrides if needed
         };
     }
