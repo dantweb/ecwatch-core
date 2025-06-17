@@ -1,3 +1,8 @@
 .env
 .git
 /src/Modules
+/vendor
+/var/log
+/var/cache
+/var/imports
+
