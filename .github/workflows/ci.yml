@@ -28,9 +28,10 @@ jobs:
             ${{ runner.os }}-php-
 
       - name: Download Atomizer
-        run: | 
+        run: |
           mkdir -p Modules
-          git clone git@github.com:dantweb/atomizer.git Modules/atomizer
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/dantweb/atomizer.git Modules/atomizer
+
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
