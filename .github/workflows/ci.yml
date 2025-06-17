@@ -27,6 +27,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-php-
 
+      - name: Download Atomizer
+        run: | 
+          mkdir -p Modules
+          git clone git git@github.com:dantweb/atomizer.git Modules/atomizer
+
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
