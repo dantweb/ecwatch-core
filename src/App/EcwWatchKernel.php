@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\App;
 
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle as SymfonyFrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -17,7 +18,7 @@ class EcwWatchKernel extends Kernel implements KernelInterface
     public function registerBundles(): iterable
     {
         // Still need at least FrameworkBundle for the Container & console commands:
-        yield new \Symfony\Bundle\FrameworkBundle\FrameworkBundle();
+        yield new SymfonyFrameworkBundle();
     }
 
     public function getProjectDir(): string
@@ -32,7 +33,7 @@ class EcwWatchKernel extends Kernel implements KernelInterface
         return $this->getProjectDir() . '/config';
     }
 
-    protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader): void
+    protected function configureContainer(ContainerBuilder $containerBuilder, LoaderInterface $loader): void
     {
         $conf = $this->getConfigDir();
         // load your packages (if any)

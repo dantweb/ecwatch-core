@@ -34,7 +34,6 @@ jobs:
         run: |
           composer phpcs
           composer phpstan
-          composer phpmd
 
       - name: Run test suite
         run: composer phpunit

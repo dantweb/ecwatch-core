@@ -14,8 +14,12 @@ abstract class AbstractPlugin implements PluginInterface
 {
     use EcwModelsTrait;
 
-    public static string $MODEL_DIR = Defaults::ECW_PLUGIN_MODELS_DIR_NAME;
-    public static string $MAP_DIR = Defaults::ECW_PLUGIN_MAPS_DIR_NAME;
+    /**
+     * @SuppressWarnings(PHPMD.CamelCasePropertyName)
+     */
+    public static string $defaultModelDir = Defaults::ECW_PLUGIN_MODELS_DIR_NAME;
+    public static string $defaultMapDir = Defaults::ECW_PLUGIN_MAPS_DIR_NAME;
+
     protected array $migratedModels = [] ;
     protected array $allModels = [];
     protected array $maps = [];
@@ -29,12 +33,12 @@ abstract class AbstractPlugin implements PluginInterface
         $this->modelDir = Path::join(
             (new Config())->getPluginDir(),
             $this->id,
-            self::$MODEL_DIR
+            self::$defaultModelDir
         );
         $this->mapDir = Path::join(
             (new Config())->getPluginDir(),
             $this->id,
-            self::$MAP_DIR
+            self::$defaultMapDir
         );
         $this->migration = new Migration(DatabaseConnector::getInstance());
         $this->baseModelMigrator = new BaseModelMigrator(

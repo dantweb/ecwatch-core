@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\App\Controller;
 
+use Dantweb\Atomizer\Adapter\BaseAdapter;
+use Dantweb\Atomizer\EcwModel\EcwModelFactory;
+use Dantweb\Atomizer\Map\MapFactory;
 use Dantweb\Ecommwatch\Framework\Service\BaseImportService;
+use Psr\Log\NullLogger;
+use RuntimeException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController as SymfonyAbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -62,12 +67,23 @@ abstract class AbstractController extends SymfonyAbstractController
             );
         }
 
+        $csvAbsPath = $this->saveCsvToTmp($body['payload']);
+
+        $mapYaml = $body['map_yaml'];
+        $map     = (new MapFactory())->create(yaml_parse($mapYaml));
+        $adapter = new BaseAdapter($map, new NullLogger());
+        $model   = (new EcwModelFactory())->createModelFromAbsPath($mapYaml);
+
         try {
             $count = $this->importService->import(
-                $body['moduleId'],
-                $body['modelName'],
-                $body['payload']
+                $body['protocol'],
+                $model,
+                $map,
+                $adapter,
+                $csvAbsPath
             );
+
+            unlink($csvAbsPath);
             return $this->json(['success' => true, 'imported' => $count]);
         } catch (\Throwable $e) {
             return $this->json(
@@ -75,5 +91,35 @@ abstract class AbstractController extends SymfonyAbstractController
                 Response::HTTP_INTERNAL_SERVER_ERROR
             );
         }
+    }
+
+    //** saves payload in a temp file and return its absolute path */
+    private function saveCsvToTmp(array $payload): string
+    {
+        $tempFile = tempnam(sys_get_temp_dir(), 'csv_import_');
+
+        if ($tempFile === false) {
+            throw new RuntimeException('Failed to create temporary file');
+        }
+
+        $csvFile = $tempFile . '.csv';
+        rename($tempFile, $csvFile);
+
+        $handle = fopen($csvFile, 'w');
+        if ($handle === false) {
+            throw new RuntimeException('Failed to open temporary file for writing');
+        }
+
+        if (!empty($payload)) {
+            $headers = array_keys(reset($payload));
+            fputcsv($handle, $headers);
+            foreach ($payload as $row) {
+                fputcsv($handle, $row);
+            }
+        }
+
+        fclose($handle);
+
+        return $csvFile;
     }
 }

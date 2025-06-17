@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<ruleset name="Ecommwatch PHPMD Rules"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>
+        PHPMD ruleset for Ecommwatch project
+    </description>
+
+    <!-- Import rule sets -->
+    <rule ref="rulesets/cleancode.xml">
+        <!-- Exclude rules you don't want -->
+        <exclude name="StaticAccess"/>
+        <exclude name="MissingImport"/>
+        <exclude name="ElseExpression"/>
+    </rule>
+    <rule ref="rulesets/codesize.xml">
+        <exclude name="TooManyPublicMethods"/>
+        <exclude name="CyclomaticComplexity"/>
+        <exclude name="NPathComplexity"/>
+    </rule>
+    <rule ref="rulesets/controversial.xml">
+        <exclude name="Superglobals"/>
+    </rule>
+    <rule ref="rulesets/design.xml"/>
+    <rule ref="rulesets/naming.xml">
+        <exclude name="ShortVariable"/>
+        <exclude name="VariableNamingConventions"/>
+        <exclude name="LongVariable"/>
+        <exclude name="CamelCasePropertyName"/>
+    </rule>
+    <rule ref="rulesets/unusedcode.xml">
+        <exclude name="UnusedFormalParameter"/>
+    </rule>
+
+    <!-- Customize the ShortVariable rule -->
+    <rule ref="rulesets/naming.xml/ShortVariable">
+        <properties>
+            <property name="minimum" value="2"/>
+            <property name="exceptions" value="id,io,db,em,pm,pk,c,a,b,m"/>
+        </properties>
+    </rule>
+
+    <!-- Customize TooManyPublicMethods -->
+    <rule ref="rulesets/codesize.xml/TooManyPublicMethods">
+        <properties>
+            <property name="maxmethods" value="15"/>
+        </properties>
+    </rule>
+
+    <!-- Customize CyclomaticComplexity -->
+    <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
+        <properties>
+            <property name="reportLevel" value="16"/>
+        </properties>
+    </rule>
+
+    <!-- Customize NPathComplexity -->
+    <rule ref="rulesets/codesize.xml/NPathComplexity">
+        <properties>
+            <property name="minimum" value="3000"/>
+        </properties>
+    </rule>
+
+    <!-- Customize LongVariable -->
+    <rule ref="rulesets/naming.xml/LongVariable">
+        <properties>
+            <property name="maximum" value="30"/>
+        </properties>
+    </rule>
+</ruleset>

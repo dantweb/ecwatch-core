@@ -103,7 +103,7 @@
     <service id="Dantweb\Ecommwatch\Framework\Application\Config" class="Dantweb\Ecommwatch\Framework\Application\Config" autowire="true" autoconfigure="true"/>
     <service id="Dantweb\Ecommwatch\Framework\Application\PluginManager" class="Dantweb\Ecommwatch\Framework\Application\PluginManager" autowire="true" autoconfigure="true"/>
     <service id="Dantweb\Ecommwatch\Framework\Exception\ECWatchAdapterImportRowException" class="Dantweb\Ecommwatch\Framework\Exception\ECWatchAdapterImportRowException" autowire="true" autoconfigure="true"/>
-    <service id="Dantweb\Ecommwatch\Framework\Exception\ECWatchException" class="Dantweb\Ecommwatch\Framework\Exception\ECWatchException" autowire="true" autoconfigure="true"/>
+    <service id="Dantweb\Ecommwatch\Framework\Exception\EcwException" class="Dantweb\Ecommwatch\Framework\Exception\EcwException" autowire="true" autoconfigure="true"/>
     <service id="Dantweb\Ecommwatch\Framework\Exception\EcwTableNotFoundException" class="Dantweb\Ecommwatch\Framework\Exception\EcwTableNotFoundException" autowire="true" autoconfigure="true"/>
     <service id="Dantweb\Ecommwatch\Framework\Exception\ExpressionTimeSpaceException" class="Dantweb\Ecommwatch\Framework\Exception\ExpressionTimeSpaceException" autowire="true" autoconfigure="true"/>
     <service id="Dantweb\Ecommwatch\Framework\Helper\DebugHelper" class="Dantweb\Ecommwatch\Framework\Helper\DebugHelper" autowire="true" autoconfigure="true"/>
@@ -217,6 +217,7 @@
       <argument type="service" id="logger" on-invalid="null"/>
       <argument>true</argument>
       <argument type="collection"/>
+      <argument type="collection"/>
     </service>
     <service id="controller.cache_attribute_listener" class="Symfony\Component\HttpKernel\EventListener\CacheAttributeListener">
       <tag name="kernel.event_subscriber"/>
@@ -271,6 +272,9 @@
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpFoundation\UriSigner" lazy="true">
       <argument>%kernel.secret%</argument>
+      <argument>_hash</argument>
+      <argument>_expiration</argument>
+      <argument>null</argument>
     </service>
     <service id="config_cache_factory" class="Symfony\Component\Config\ResourceCheckerConfigCacheFactory">
       <argument type="tagged_iterator" tag="config_cache.resource_checker"/>
@@ -736,6 +740,19 @@
         <argument>Encrypt all local secrets to the vault</argument>
       </call>
     </service>
+    <service id="console.command.error_dumper" class="Symfony\Component\ErrorHandler\Command\ErrorDumpCommand">
+      <tag name="console.command"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="filesystem"/>
+      <argument type="service" id="error_handler.error_renderer.html"/>
+      <argument>null</argument>
+      <call method="setName">
+        <argument>error:dump</argument>
+      </call>
+      <call method="setDescription">
+        <argument>Dump error pages to plain HTML files that can be directly served by a web server</argument>
+      </call>
+    </service>
     <service id="console.messenger.application" class="Symfony\Bundle\FrameworkBundle\Console\Application" shared="false">
       <argument type="service" id="kernel"/>
       <call method="setAutoExit">
@@ -964,6 +981,7 @@
       <argument type="service" id="debug.stopwatch"/>
       <argument type="service" id="logger" on-invalid="null"/>
       <argument type="service" id="request_stack" on-invalid="null"/>
+      <argument>null</argument>
       <call method="addListener">
         <argument>kernel.response</argument>
         <argument type="collection">
@@ -1308,6 +1326,12 @@
     </service>
     <service id=".cache_connection.MfCypIA" class="Symfony\Component\Cache\Adapter\AbstractAdapter" constructor="createConnection">
       <argument>redis://localhost</argument>
+      <argument type="collection">
+        <argument key="lazy">true</argument>
+      </argument>
+    </service>
+    <service id=".cache_connection.H8vabc8" class="Symfony\Component\Cache\Adapter\AbstractAdapter" constructor="createConnection">
+      <argument>valkey://localhost</argument>
       <argument type="collection">
         <argument key="lazy">true</argument>
       </argument>
@@ -1737,9 +1761,16 @@
       <argument>false</argument>
       <argument type="service_closure" id="console.command.secrets_encrypt_from_local"/>
     </service>
+    <service id=".console.command.error_dumper.lazy" class="Symfony\Component\Console\Command\LazyCommand">
+      <argument>error:dump</argument>
+      <argument type="collection"/>
+      <argument>Dump error pages to plain HTML files that can be directly served by a web server</argument>
+      <argument>false</argument>
+      <argument type="service_closure" id="console.command.error_dumper"/>
+    </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
-      <argument type="service" id=".service_locator.GAYwYnI"/>
+      <argument type="service" id=".service_locator.x8G5HqV"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -1767,9 +1798,10 @@
         <argument key="secrets:reveal">console.command.secrets_reveal</argument>
         <argument key="secrets:decrypt-to-local">console.command.secrets_decrypt_to_local</argument>
         <argument key="secrets:encrypt-from-local">console.command.secrets_encrypt_from_local</argument>
+        <argument key="error:dump">console.command.error_dumper</argument>
       </argument>
     </service>
-    <service id=".service_locator.GAYwYnI" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.x8G5HqV" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="console.command.about" type="service_closure" id=".console.command.about.lazy"/>
@@ -1798,6 +1830,7 @@
         <argument key="console.command.secrets_reveal" type="service_closure" id=".console.command.secrets_reveal.lazy"/>
         <argument key="console.command.secrets_decrypt_to_local" type="service_closure" id=".console.command.secrets_decrypt_to_local.lazy"/>
         <argument key="console.command.secrets_encrypt_from_local" type="service_closure" id=".console.command.secrets_encrypt_from_local.lazy"/>
+        <argument key="console.command.error_dumper" type="service_closure" id=".console.command.error_dumper.lazy"/>
       </argument>
     </service>
     <service id="Dantweb\Ecommwatch\Framework\Application\PluginInterface" alias="Dantweb\Ecommwatch\Framework\Application\BasePlugin"/>
@@ -1817,6 +1850,7 @@
     <service id="Symfony\Component\Filesystem\Filesystem" alias="filesystem"/>
     <service id="Symfony\Component\HttpKernel\Config\FileLocator" alias="file_locator"/>
     <service id="Symfony\Component\HttpFoundation\UriSigner" alias="uri_signer"/>
+    <service id="Symfony\Component\HttpKernel\DependencyInjection\ServicesResetterInterface" alias="services_resetter"/>
     <service id="Symfony\Component\DependencyInjection\ReverseContainer" alias="reverse_container"/>
     <service id="Symfony\Component\String\Slugger\SluggerInterface" alias="slugger"/>
     <service id="Symfony\Component\HttpKernel\Fragment\FragmentUriGeneratorInterface" alias="fragment.uri_generator"/>
@@ -1824,6 +1858,8 @@
     <service id="error_renderer" alias="error_handler.error_renderer.html"/>
     <service id=".Psr\Container\ContainerInterface $parameter_bag" alias="parameter_bag"/>
     <service id="Psr\Container\ContainerInterface $parameterBag" alias="parameter_bag"/>
+    <service id="cache.adapter.valkey" alias="cache.adapter.redis"/>
+    <service id="cache.adapter.valkey_tag_aware" alias="cache.adapter.redis_tag_aware"/>
     <service id="cache.app_clearer" alias="cache.default_clearer" public="true"/>
     <service id="Psr\Cache\CacheItemPoolInterface" alias="cache.app"/>
     <service id="Symfony\Contracts\Cache\CacheInterface" alias="cache.app"/>
@@ -1837,6 +1873,7 @@
     <service id="Symfony\Component\Routing\RequestContextAwareInterface" alias="router.default"/>
     <service id="Symfony\Component\Routing\RequestContext" alias="router.request_context"/>
     <service id="cache.default_redis_provider" alias=".cache_connection.MfCypIA"/>
+    <service id="cache.default_valkey_provider" alias=".cache_connection.H8vabc8"/>
     <service id="cache.default_memcached_provider" alias=".cache_connection.8kvDmRs"/>
     <service id="cache.default_doctrine_dbal_provider" alias="database_connection"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.pRu6x_4" public="true"/>

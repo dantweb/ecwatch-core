@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware;
 
-use App\Modules\Atomizer\src\EcwModel\AbstractEcwModel;
+use Dantweb\Atomizer\EcwModel\AbstractEcwModel;
 use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
 use Dantweb\Ecommwatch\Framework\Middleware\Migration;
 use PDO;

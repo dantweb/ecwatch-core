@@ -7,7 +7,7 @@ namespace Dantweb\Ecommwatch\Tests\Unit\App\Command;
 use Dantweb\Ecommwatch\App\Command\InstallPluginCommand;
 use Dantweb\Ecommwatch\App\EcwWatchKernel;
 use Dantweb\Ecommwatch\Framework\Application\PluginManager;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Ecommwatch\Framework\Exception\EcwException;
 use PHPUnit\Framework\TestCase;
 use Symfony\Bundle\FrameworkBundle\Console\Application as ConsoleApplication;
 use Symfony\Component\Console\Command\Command;
@@ -63,7 +63,7 @@ class InstallPluginCommandTest extends TestCase
         $tester  = new CommandTester($command);
         $installedPlugins = $manager->getInstalledPlugins();
         if (!empty($installedPlugins)) {
-            $this->expectException(ECWatchException::class);
+            $this->expectException(EcwException::class);
             $tester->execute(['pluginId' => $pluginId]);
         } else {
             $tester->execute(['pluginId' => $pluginId]);

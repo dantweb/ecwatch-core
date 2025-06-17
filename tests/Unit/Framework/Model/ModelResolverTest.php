@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Tests\Unit\Framework\Model;
 
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Ecommwatch\Framework\Exception\EcwException;
 use Dantweb\Ecommwatch\Framework\Service\ModelResolver;
 use Dantweb\Ecommwatch\Tests\Unit\DemoDataImportTrait;
 use DateTime;
@@ -16,7 +16,7 @@ class ModelResolverTest extends TestCase
 
 
     /**
-     * @throws ECWatchException
+     * @throws EcwException
      */
     public function testOrderCount2(): void
     {
@@ -36,7 +36,7 @@ class ModelResolverTest extends TestCase
     }
 
     /**
-     * @throws ECWatchException
+     * @throws EcwException
      */
     public function testOrderCountW(): void
     {
@@ -47,7 +47,7 @@ class ModelResolverTest extends TestCase
     }
 
     /**
-     * @throws ECWatchException
+     * @throws EcwException
      */
     public function testOrderBrutto(): void
     {

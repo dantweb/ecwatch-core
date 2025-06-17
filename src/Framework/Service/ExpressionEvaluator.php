@@ -119,6 +119,9 @@ class ExpressionEvaluator
         return 0.0;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     */
     private function calculateScalarValue($node, array $evaluated): float
     {
         if (($node->getName() === 'total' || $node->getName() === 'sum') && is_array($evaluated)) {
@@ -148,5 +151,7 @@ class ExpressionEvaluator
         if ($node->getName() === 'first' && is_array($evaluated)) {
             return reset($evaluated);
         }
+
+        return 0.0;
     }
 }

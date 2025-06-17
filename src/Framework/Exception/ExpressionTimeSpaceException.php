@@ -6,6 +6,6 @@ namespace Dantweb\Ecommwatch\Framework\Exception;
 
 use Exception;
 
-class ExpressionTimeSpaceException extends EcWatchException
+class ExpressionTimeSpaceException extends EcwException
 {
 }

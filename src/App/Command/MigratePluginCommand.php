@@ -12,7 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Dantweb\Ecommwatch\Framework\Middleware\Migration;
 use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Ecommwatch\Framework\Exception\EcwException;
 
 class MigratePluginCommand extends Command
 {
@@ -84,7 +84,7 @@ class MigratePluginCommand extends Command
             }
         } catch (\Exception $e) {
             $io->error('Migration failed: ' . $e->getMessage());
-            throw new ECWatchException($e->getMessage());
+            throw new EcwException($e->getMessage());
         }
 
         $io->success("All migrations for plugin '{$pluginId}' have run successfully.");

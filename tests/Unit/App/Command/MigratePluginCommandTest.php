@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Tests\Unit\App\Command;
 
-use App\Modules\Atomizer\src\EcwModel\AbstractEcwModel;
+use Dantweb\Atomizer\EcwModel\AbstractEcwModel;
 use Dantweb\Ecommwatch\App\Command\MigratePluginCommand;
 use Dantweb\Ecommwatch\App\EcwWatchKernel;
 use Dantweb\Ecommwatch\Framework\Application\PluginManager;

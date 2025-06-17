@@ -29,11 +29,10 @@ class DatabaseConnector
         string $dbUser = '',
         string $dbPassword = '',
         string $dbName = '',
-        int $dbPort = 3306,
-        string $writingMode = 'duplicates_report'
+        int $dbPort = 3306
     ) {
         $rootDir = dirname(__DIR__, 3);
-
+        $envFile = [];
         $envFile[0] = Path::join($rootDir, '.env');
         $envFile[1] = Path::join($rootDir, 'tests', '.env');
         $dotenv = new Dotenv();
@@ -75,10 +74,9 @@ class DatabaseConnector
         string $dbPassword = '',
         string $dbName = '',
         int $dbPort = 3306,
-        string $writingMode = 'duplicates_report'
     ): self {
         if (self::$instance === null) {
-            self::$instance = new self($dbHost, $dbUser, $dbPassword, $dbName, $dbPort, $writingMode);
+            self::$instance = new self($dbHost, $dbUser, $dbPassword, $dbName, $dbPort);
         }
 
         $instance = self::$instance;
@@ -90,7 +88,7 @@ class DatabaseConnector
             $dbName !== '' && $instance->dbName !== $dbName ||
             $dbPort !== 3306 && $instance->dbPort !== $dbPort
         ) {
-            return new self($dbHost, $dbUser, $dbPassword, $dbName, $dbPort, $writingMode);
+            return new self($dbHost, $dbUser, $dbPassword, $dbName, $dbPort);
         }
 
         return self::$instance;

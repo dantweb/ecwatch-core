@@ -8,6 +8,7 @@ use Dantweb\Ecommwatch\Framework\Helper\DebugHelper;
 
 trait DataPathParser
 {
+    /** @return array<int, string>|null */
     public static function parseDataPath(string $rawField, string $field): ?array
     {
         if (!str_starts_with($rawField, 'raw.')) {

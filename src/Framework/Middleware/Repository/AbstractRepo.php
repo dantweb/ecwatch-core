@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Framework\Middleware\Repository;
 
-use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
+use Dantweb\Atomizer\EcwModel\EcwModelInterface;
 use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
 use PDO;
 
@@ -31,13 +31,11 @@ abstract class AbstractRepo implements RepoInterface
         }
     }
 
-    public function setWritingMode(string $mode): bool
+    public function setWritingMode(string $mode): void
     {
         if (in_array($mode, $this->allowedWritingModes, true)) {
             $this->writingMode = $mode;
-            return true;
         }
-        return false;
     }
 
     public function getWritingMode(): string
@@ -303,7 +301,6 @@ abstract class AbstractRepo implements RepoInterface
      *
      * @param int $start The start range value.
      * @param int $end The end range value.
-     * @param string $field The field to filter the range on (default is "id").
      * @return EcwModelInterface[] An array of model instances within the range.
      */
     public function findRange(int $start, int $end): array

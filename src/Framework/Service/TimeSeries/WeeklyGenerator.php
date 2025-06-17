@@ -9,6 +9,13 @@ use DateTime;
 
 class WeeklyGenerator implements TimeSeriesGeneratorInterface
 {
+    /**
+     * @param DateTime $start
+     * @param DateTime $end
+     * @return array<int|string, DateTime>
+     * @throws ExpressionTimeSpaceException
+     * @throws \DateMalformedStringException
+     */
     public function generate(DateTime $start, DateTime $end): array
     {
         $interval = $start->diff($end);

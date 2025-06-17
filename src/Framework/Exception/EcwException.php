@@ -6,6 +6,6 @@ namespace Dantweb\Ecommwatch\Framework\Exception;
 
 use Exception;
 
-class ECWatchException extends Exception
+class EcwException extends Exception
 {
 }

@@ -16,6 +16,7 @@ abstract class AbstractModel extends AbstractEcwModel implements AbstractInterfa
     protected string $className;
     protected string $rawDataObjectName;
     protected DebugHelper $logger;
+    protected mixed $dbTableName;
 
     public function __construct(string $name = '', array $fields = [])
     {
@@ -79,10 +80,13 @@ abstract class AbstractModel extends AbstractEcwModel implements AbstractInterfa
 
         if ($this->hasProperty($key)) {
             $this->setField($key, $value);
+            return true;
         } else {
             Logger::warn("AbstractImportDataModel::setDataByFieldPath error: $key "
                 . "does not exist in the model $this->className ");
         }
+
+        return false;
     }
 
     public function hasProperty(string $name): bool
@@ -113,5 +117,10 @@ abstract class AbstractModel extends AbstractEcwModel implements AbstractInterfa
     public function setRawDataObjectName(string $rawDataObjectName): void
     {
         $this->rawDataObjectName = $rawDataObjectName;
+    }
+
+    public function setDbTableName(mixed $dbTableName): void
+    {
+        $this->dbTableName = $dbTableName;
     }
 }

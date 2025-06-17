@@ -4,25 +4,27 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Framework\Middleware;
 
-use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
+use Dantweb\Atomizer\EcwModel\EcwModelInterface;
 use Dantweb\Ecommwatch\Config\Defaults;
 use Dantweb\Ecommwatch\Framework\Application\EcwModelsTrait;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Ecommwatch\Framework\Exception\EcwException;
 use Dantweb\Ecommwatch\Framework\Helper\Logger;
 
 abstract class AbstractModelMigrator
 {
     use EcwModelsTrait;
 
-    public static string $MODEL_DIR = Defaults::ECW_PLUGIN_MODELS_DIR_NAME;
-    public static string $MAP_DIR = Defaults::ECW_PLUGIN_MAPS_DIR_NAME;
+    /**
+     * @SuppressWarnings(PHPMD.CamelCasePropertyName)
+     */
+    public static string $defaultModelDir = Defaults::ECW_PLUGIN_MODELS_DIR_NAME;
 
     public function __construct(
         protected Migration $migrationService,
         protected string $modelDir
     ) {
         if (empty($this->modelDir)) {
-            $this->modelDir = self::$MODEL_DIR;
+            $this->modelDir = self::$defaultModelDir;
         }
     }
 
@@ -41,7 +43,7 @@ abstract class AbstractModelMigrator
 
             try {
                 $this->migrationService->run($migrationSql);
-            } catch (ECWatchException $e) {
+            } catch (EcwException $e) {
                 Logger::error($e->getMessage());
             }
         }

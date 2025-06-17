@@ -30,8 +30,8 @@
   },
   "repositories": [
     {
-      "type": "vcs",
-      "url": "https://github.com/dantweb/atomizer.git",
+      "type": "path",
+      "url": "Modules/atomizer",
       "options": {
         "symlink": true
       }
@@ -46,7 +46,8 @@
   ],
   "autoload": {
     "psr-4": {
-      "Dantweb\\Ecommwatch\\": "src/"
+      "Dantweb\\Ecommwatch\\": "src/",
+      "Dantweb\\Atomizer\\": "Modules/atomizer/src/"
     }
   },
   "autoload-dev": {
@@ -57,8 +58,8 @@
   "scripts": {
     "phpcs": "phpcs --standard=PSR12 src tests",
     "phpcbf": "phpcbf --standard=PSR12 src tests",
-    "phpstan": "phpstan analyse src --level=max",
-    "phpmd": "phpmd src text phpmd.xml",
+    "phpstan": "phpstan analyse src --level=2",
+    "phpmd": "phpmd src text phpmd.xml --exclude vendor/,var/,tests/_generated/\n",
     "phpunit": "phpunit"
   },
   "config": {

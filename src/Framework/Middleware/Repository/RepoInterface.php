@@ -2,7 +2,7 @@
 
 namespace Dantweb\Ecommwatch\Framework\Middleware\Repository;
 
-use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
+use Dantweb\Atomizer\EcwModel\EcwModelInterface;
 
 interface RepoInterface
 {
@@ -11,6 +11,8 @@ interface RepoInterface
     public function findOne(int $id): ?EcwModelInterface;
 
     public function findById(int $id): ?EcwModelInterface;
+
+    public function findRange(int $start, int $end): array;
 
     public function save(EcwModelInterface $ecwModel): void;
 
@@ -25,4 +27,6 @@ interface RepoInterface
     public function getEcwModel(): EcwModelInterface;
 
     public function where(string $field, string $operator, mixed $value): ?EcwModelInterface;
+
+    public function setWritingMode(string $mode): void;
 }

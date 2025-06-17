@@ -8,6 +8,7 @@ use InvalidArgumentException;
 
 class TimeSeriesGeneratorFactory
 {
+    /** @var array|string[]  */
     private array $functions = ['total', 'avg', 'min', 'max'];
 
     public function create(string $functionName): TimeSeriesGeneratorInterface

@@ -7,7 +7,7 @@ namespace Dantweb\Ecommwatch\App\Command;
 use Dantweb\Atomizer\Adapter\BaseAdapter;
 use Dantweb\Atomizer\EcwModel\EcwModelFactory;
 use Dantweb\Atomizer\Map\MapFactory;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Ecommwatch\Framework\Exception\EcwException;
 use Dantweb\Ecommwatch\Framework\Service\BaseImportService;
 use Dantweb\Ecommwatch\Framework\Service\ImportService;
 use Psr\Log\NullLogger;
@@ -98,7 +98,7 @@ class ImportModelCommand extends Command
 
         try {
             $count = $service->import($protocol, $model, $map, $adapter, $csvPath);
-        } catch (ECWatchException $e) {
+        } catch (EcwException $e) {
             $io->error('Import failed: ' . $e->getMessage());
             return Command::FAILURE;
         }

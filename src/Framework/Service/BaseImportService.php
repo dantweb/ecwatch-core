@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Dantweb\Ecommwatch\Framework\Service;
 
 use Dantweb\Atomizer\Adapter\AdapterInterface;
-use Dantweb\Atomizer\EcwModelInterface;
-use Dantweb\Atomizer\MapInterface;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Atomizer\EcwModel\EcwModelInterface;
+use Dantweb\Atomizer\Map\MapInterface;
+use Dantweb\Ecommwatch\Framework\Exception\EcwException;
 use Dantweb\Ecommwatch\Framework\Exception\EcwTableNotFoundException;
 use Dantweb\Ecommwatch\Framework\Helper\Logger;
 use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
@@ -48,13 +48,18 @@ class BaseImportService
             try {
                 $repo->save($importedModel);
                 $count++;
-            } catch (ECWatchException $e) {
+            } catch (EcwException $e) {
                 Logger::error($e->getMessage());
             }
         }
+
         return $count;
     }
 
+    /**
+     * @throws EcwException
+     * @throws EcwTableNotFoundException
+     */
     public function import(
         string $protocol,
         EcwModelInterface $ecwModel,
@@ -63,7 +68,7 @@ class BaseImportService
         string $absPathCsv
     ): int {
         if (!in_array($protocol, self::PROTOCOLS)) {
-            throw new ECWatchException('Protocol not supported: ' . $protocol);
+            throw new EcwException('Protocol not supported: ' . $protocol);
         }
 
         switch ($protocol) {
@@ -73,5 +78,7 @@ class BaseImportService
             case self::PROTOCOL_JSON:
                 break;
         }
+
+        return 0;
     }
 }

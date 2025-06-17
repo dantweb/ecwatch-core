@@ -12,7 +12,7 @@ return [
     'Dantweb\\Ecommwatch\\Framework\\Application\\PluginInterface' => true,
     'Dantweb\\Ecommwatch\\Framework\\Application\\PluginManager' => true,
     'Dantweb\\Ecommwatch\\Framework\\Exception\\ECWatchAdapterImportRowException' => true,
-    'Dantweb\\Ecommwatch\\Framework\\Exception\\ECWatchException' => true,
+    'Dantweb\\Ecommwatch\\Framework\\Exception\\EcwException' => true,
     'Dantweb\\Ecommwatch\\Framework\\Exception\\EcwTableNotFoundException' => true,
     'Dantweb\\Ecommwatch\\Framework\\Exception\\ExpressionTimeSpaceException' => true,
     'Dantweb\\Ecommwatch\\Framework\\Helper\\DebugHelper' => true,

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Dantweb\Ecommwatch\Framework\Service;
 
 use Dantweb\Ecommwatch\Framework\Application\PluginManager;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Ecommwatch\Framework\Exception\EcwException;
 use Dantweb\Ecommwatch\Framework\Models\Domain\AbstractDomainModel;
 use Dantweb\Ecommwatch\Framework\Models\Domain\DomainModelInterface;
 use DateTime;
@@ -35,12 +35,12 @@ class ModelResolver
         }
 
         if ($fieldName !== '' && !self::fieldExists($domainModel, $fieldName)) {
-            throw new ECWatchException("Field '{$fieldName}' not found in '{$modelName}'.");
+            throw new EcwException("Field '{$fieldName}' not found in '{$modelName}'.");
         }
 
         try {
             $result = self::callDomainMethod($domainModel, $method, $fieldName, $start, $end, $resolution);
-        } catch (ECWatchException $e) {
+        } catch (EcwException $e) {
             return 0.0;
         }
 

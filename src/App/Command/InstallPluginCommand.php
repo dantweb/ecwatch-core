@@ -6,7 +6,7 @@ namespace Dantweb\Ecommwatch\App\Command;
 
 use Dantweb\Ecommwatch\Framework\Application\Config;
 use Dantweb\Ecommwatch\Framework\Application\PluginManager;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Ecommwatch\Framework\Exception\EcwException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -56,7 +56,7 @@ class InstallPluginCommand extends Command
         } catch (IOException | \Exception $e) {
             $io->error('Failed to install plugin');
             $io->error($e->getMessage());
-            throw new ECWatchException($e->getMessage());
+            throw new EcwException($e->getMessage());
         }
 
         $io->success('Plugin installed successfully');

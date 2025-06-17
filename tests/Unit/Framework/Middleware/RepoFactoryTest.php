@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Tests\Unit\Framework\Middleware;
 
-use App\Modules\Atomizer\src\EcwModel\AbstractEcwModel;
-use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
+use Dantweb\Atomizer\EcwModel\AbstractEcwModel;
+use Dantweb\Atomizer\EcwModel\EcwModelInterface;
 use Dantweb\Ecommwatch\Framework\Exception\EcwTableNotFoundException;
 use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;
 use Dantweb\Ecommwatch\Framework\Middleware\Migration;

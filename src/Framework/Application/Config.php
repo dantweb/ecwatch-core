@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Dantweb\Ecommwatch\Framework\Application;
 
 use Dantweb\Ecommwatch\Config\Defaults;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Ecommwatch\Framework\Exception\EcwException;
 
 class Config
 {
@@ -44,7 +44,7 @@ class Config
     }
 
     /**
-     * @throws ECWatchException
+     * @throws EcwException
      */
     public function addPlugin(string $pluginName): bool
     {
@@ -56,6 +56,6 @@ class Config
             return true;
         }
 
-        throw new  ECWatchException('Plugin already exists');
+        throw new  EcwException('Plugin already exists');
     }
 }

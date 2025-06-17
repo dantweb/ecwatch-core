@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Tests\Unit\Framework\Service;
 
-use App\Modules\Atomizer\src\Adapter\BaseAdapter;
-use App\Modules\Atomizer\src\EcwModel\AbstractEcwModel;
-use App\Modules\Atomizer\src\EcwModel\EcwModelFactory;
-use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
-use App\Modules\Atomizer\src\Map\MapFactory;
-use App\Modules\Atomizer\src\Map\MapInterface;
+use Dantweb\Atomizer\Adapter\BaseAdapter;
+use Dantweb\Atomizer\EcwModel\AbstractEcwModel;
+use Dantweb\Atomizer\EcwModel\EcwModelFactory;
+use Dantweb\Atomizer\EcwModel\EcwModelInterface;
+use Dantweb\Atomizer\Map\MapFactory;
+use Dantweb\Atomizer\Map\MapInterface;
 use Dantweb\Ecommwatch\Framework\Exception\EcwTableNotFoundException;
 use Dantweb\Ecommwatch\Framework\Middleware\BaseModelMigrator;
 use Dantweb\Ecommwatch\Framework\Middleware\DatabaseConnector;

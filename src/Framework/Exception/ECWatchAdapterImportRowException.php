@@ -2,6 +2,6 @@
 
 namespace Dantweb\Ecommwatch\Framework\Exception;
 
-class ECWatchAdapterImportRowException extends ECWatchException
+class ECWatchAdapterImportRowException extends EcwException
 {
 }

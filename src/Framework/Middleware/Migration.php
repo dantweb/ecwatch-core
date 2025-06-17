@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Dantweb\Ecommwatch\Framework\Middleware;
 
-use App\Modules\Atomizer\src\EcwModel\EcwModelInterface;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Atomizer\EcwModel\EcwModelInterface;
+use Dantweb\Ecommwatch\Framework\Exception\EcwException;
 use Dantweb\Ecommwatch\Framework\Helper\Logger;
 use Exception;
 use PDO;
@@ -32,9 +32,9 @@ class Migration
 
         try {
             return $this->generateAlterTableSql($tableName, $fields);
-        } catch (ECWatchException $e) {
+        } catch (EcwException $e) {
             Logger::warn($e->getMessage());
-            throw new ECWatchException("Migration failed: " . $e->getMessage());
+            throw new EcwException("Migration failed: " . $e->getMessage());
         }
     }
 
@@ -156,7 +156,7 @@ class Migration
             $executionResult = $this->pdo->exec($migrationSql);
 
             if ($executionResult === false) {
-                throw new ECWatchException("Migration SQL execution failed");
+                throw new EcwException("Migration SQL execution failed");
             }
 
             return true;
