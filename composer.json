@@ -60,7 +60,7 @@
     "phpcbf": "phpcbf --standard=PSR12 src tests",
     "phpstan": "phpstan analyse src --level=2",
     "phpmd": "phpmd src text phpmd.xml --exclude vendor/,var/,tests/_generated/\n",
-    "phpunit": "phpunit"
+    "phpunit": "vendor/bin/phpunit --log-junit junit-report.xml --testdox --display-deprecations --display-warnings /app/core/tests"
   },
   "config": {
     "optimize-autoloader": true,
